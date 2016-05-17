@@ -1,0 +1,159 @@
+<xacro:macro name="body_links">
+<!--  MAIN BODY  -->
+<!--  MAIN LINK  -->
+    <link name='HR-OS1::body_structure_link'>
+      
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+
+      <visual name='body_structure_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://HR-OS1/meshes/HROS1_Simple - Body_Structure.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+        </material>
+      </visual>
+      
+      <collision name="collision">
+        <pose> 0 -0.055 0.08 0 0 0 </pose>
+        <geometry>
+          <box>
+            <size>0.08 0.07 0.12</size>
+          </box>
+        </geometry>
+      </collision>
+      
+      <inertial>
+        <pose>0 -0.065 0.082 0 -0 0</pose>
+        <mass>0.273</mass>
+        <inertia>
+          <ixx>0.00074</ixx>
+          <ixy>-0.0000022</ixy>
+          <ixz>0.000000010</ixz>
+          
+          <iyy>0.00088</iyy>
+          <iyz>0.000012</iyz>
+          
+          <izz>0.00047</izz>
+          </inertia>
+      </inertial>
+    </link> 
+
+
+
+<!--  SERVOS ON BODY  -->
+<!--  JOINTS CONNECTED HERE  -->
+    <link name='HR-OS1::body_servos_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+
+      <visual name='body_servos_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://HR-OS1/meshes/HROS1_Simple - Body_Servos.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+        </material>
+      </visual>
+      
+      <inertial>
+        <pose>0 -0.055 0.086 0 -0 0</pose>
+        <mass>0.221</mass>
+        <inertia>
+          <ixx>0.000056</ixx>
+          <ixy>0.000000068</ixy>
+          <ixz>0.00000015</ixz>
+          
+          <iyy>0.00078</iyy>
+          <iyz>-0.00010</iyz>
+          
+          <izz>0.00031</izz>
+          </inertia>
+      </inertial>
+    </link>
+
+
+<!--  MAIN BATTERY  -->
+<!--  ADDED FOR WEIGHT  -->
+    <link name='HR-OS1::body_battery_link'>
+      <pose>0 0 0 0 -0 0</pose>
+      <gravity>0</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+
+      <visual name='body_battery_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://HR-OS1/meshes/HROS1_Simple - Body_Battery.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+        </material>
+      </visual>
+      
+      <inertial>
+        <pose>0 -0.078 0.036 0 -0 0</pose>
+        <mass>0.25</mass>
+        <inertia>
+          <ixx>0.000037</ixx>
+          <ixy>-0.000000049</ixy>
+          <ixz>0.0</ixz>
+          
+          <iyy>0.00026</iyy>
+          <iyz>0.0</iyz>
+          
+          <izz>0.00027</izz>
+          </inertia>
+      </inertial>
+    </link>
+</xacro:macro>
+
+<xacro:macro name="body_joints">
+<joint name="body-servos_fixture_joint" type="revolute">
+    <parent>HR-OS1::body_structure_link</parent>
+    <child>HR-OS1::body_servos_link</child>
+    <axis>
+      <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+    </axis>
+  </joint>
+  
+  <joint name="body-battery_fixture_joint" type="revolute">
+    <parent>HR-OS1::body_structure_link</parent>
+    <child>HR-OS1::body_battery_link</child>
+    <axis>
+      <xyz>0 1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+    </axis>
+  </joint>
+</xacro:macro>

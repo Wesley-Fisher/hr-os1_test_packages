@@ -1,0 +1,30 @@
+<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_dimensions.xacro"/>
+
+<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_body.xacro"/>
+<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_neck.xacro"/>
+
+<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_left_arm.xacro"/>
+<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_left_leg.xacro"/>
+
+<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_right_arm.xacro"/>
+<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_right_leg.xacro"/>
+
+<robot name="hros1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:body_links />
+    <xacro:body_joints />
+    
+    <xacro:neck_links />
+    <xacro:neck_joints />
+    
+    <xacro:left_arm_links />
+    <xacro:left_arm_joints />
+    <xacro:left_leg_links />
+    <xacro:left_leg_joints />
+    
+    <xacro:right_arm_links />
+    <xacro:right_arm_joints />
+    <xacro:right_leg_links />
+    <xacro:right_leg_joints />
+
+<\robot>
