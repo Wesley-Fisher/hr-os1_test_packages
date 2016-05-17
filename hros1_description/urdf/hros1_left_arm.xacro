@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
 <xacro:macro name="left_arm_links">
 <!--  LEFT ARM SHOULDER  -->
     <link name='HR-OS1::left_arm_shoulder_link'>
@@ -203,3 +204,4 @@
     <pose>0 -0.037 0.03 0 0 0</pose>
   </joint>
 </xacro:macro>
+</robot>
