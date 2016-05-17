@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_dimensions.xacro"/>
 
 <xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_body.xacro"/>
