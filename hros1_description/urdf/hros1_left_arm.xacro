@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <xacro:macro name="left_arm_links">
 <!--  LEFT ARM SHOULDER  -->
     <link name='HR-OS1::left_arm_shoulder_link'>

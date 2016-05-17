@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <xacro:macro name="left_leg_links">
 <!-- LEFT Upper HIP  -->
     <link name='HR-OS1::left_leg_upper_hip_link'>

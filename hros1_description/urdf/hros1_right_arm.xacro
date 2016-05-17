@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <xacro:macro name="right_arm_links">
 	<link name='HR-OS1::right_arm_shoulder_link'>
       <pose>0 0 0 0 -0 0</pose>

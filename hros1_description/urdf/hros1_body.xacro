@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <xacro:macro name="body_links">
 <!--  MAIN BODY  -->
 <!--  MAIN LINK  -->
