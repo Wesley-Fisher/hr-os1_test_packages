@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-
-<xacro:macro name="blank">
-<!-- Blank -->
-</xacro:macro>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+    <xacro:macro name="blank">
+    <!-- Blank -->
+    </xacro:macro>
+</robot>
