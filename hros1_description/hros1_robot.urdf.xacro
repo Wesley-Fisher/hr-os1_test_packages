@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_dimensions.xacro"/>
+<xacro:include filename="$(find hros1_description)/urdf/hros1_dimensions.xacro"/>
 
-<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_body.xacro"/>
-<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_neck.xacro"/>
+<xacro:include filename="$(find hros1_description)/urdf/hros1_body.xacro"/>
+<xacro:include filename="$(find hros1_description)/urdf/hros1_neck.xacro"/>
 
-<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_left_arm.xacro"/>
-<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_left_leg.xacro"/>
+<xacro:include filename="$(find hros1_description)/urdf/hros1_left_arm.xacro"/>
+<xacro:include filename="$(find hros1_description)/urdf/hros1_left_leg.xacro"/>
 
-<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_right_arm.xacro"/>
-<xacro:include filename="$(find hros1_descri;tion)/urdf/hros1_right_leg.xacro"/>
+<xacro:include filename="$(find hros1_description)/urdf/hros1_right_arm.xacro"/>
+<xacro:include filename="$(find hros1_description)/urdf/hros1_right_leg.xacro"/>
 
 <robot name="hros1" xmlns:xacro="http://www.ros.org/wiki/xacro">
     
