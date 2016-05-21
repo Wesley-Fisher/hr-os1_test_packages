@@ -10,7 +10,7 @@
       <kinematic>0</kinematic>
 
       <visual name='body_structure_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0"  rpy="0 -0 0"/>
         <geometry>
           <mesh filename="package://hros1_description/meshes/HROS1_Simple - Body_Structure.stl"/>
         </geometry>
@@ -25,7 +25,7 @@
       </visual>
       
       <collision name="collision">
-        <pose> 0 -0.055 0.08 0 0 0 </pose>
+        <origin xyz="0 -0.055 0.08" rpy="0 0 0"/>
         <geometry>
           <box size="0.08 0.07 0.12"/>
         </geometry>
@@ -52,7 +52,7 @@
 <!--  SERVOS ON BODY  -->
 <!--  JOINTS CONNECTED HERE  -->
     <link name='HR-OS1::body_servos_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -92,13 +92,13 @@
 <!--  MAIN BATTERY  -->
 <!--  ADDED FOR WEIGHT  -->
     <link name='HR-OS1::body_battery_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy"0 -0 0"/>
       <gravity>0</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='body_battery_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
           <mesh filename="package://hros1_description/meshes/HROS1_Simple - Body_Battery.stl"/>
         </geometry>
