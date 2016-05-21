@@ -60,10 +60,7 @@
       <visual name='body_servos_visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Body_Servos.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Body_Servos.stl"/>
         </geometry>
         <material>
           <script>
@@ -101,10 +98,7 @@
       <visual name='body_battery_visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Body_Battery.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Body_Battery.stl"/>
         </geometry>
         <material>
           <script>
