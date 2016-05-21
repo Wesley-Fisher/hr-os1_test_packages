@@ -34,19 +34,19 @@
         </geometry>
       </collision>
       
-      <inertial>
+      <inertial
         <pose>0 -0.065 0.082 0 -0 0</pose>
         <mass>0.273</mass>
-        <inertia>
-          <ixx>0.00074</ixx>
-          <ixy>-0.0000022</ixy>
-          <ixz>0.000000010</ixz>
+        <inertia
+          ixx="0.00074"
+          ixy="-0.0000022"
+          ixz="0.000000010"
           
-          <iyy>0.00088</iyy>
-          <iyz>0.000012</iyz>
+          iyy="0.00088"
+          iyz="0.000012"
           
-          <izz>0.00047</izz>
-          </inertia>
+          izz="0.00047"
+          />
       </inertial>
     </link> 
 
@@ -76,19 +76,19 @@
         </material>
       </visual>
       
-      <inertial>
+      <inertial
         <pose>0 -0.055 0.086 0 -0 0</pose>
         <mass>0.221</mass>
-        <inertia>
-          <ixx>0.000056</ixx>
-          <ixy>0.000000068</ixy>
-          <ixz>0.00000015</ixz>
+        <inertia
+          ixx="0.000056"
+          ixy="0.000000068"
+          ixz="0.00000015"
           
-          <iyy>0.00078</iyy>
-          <iyz>-0.00010</iyz>
+          iyy="0.00078"
+          iyz="-0.00010"
           
-          <izz>0.00031</izz>
-          </inertia>
+          izz="0.00031"
+          />
       </inertial>
     </link>
 
@@ -120,16 +120,16 @@
       <inertial>
         <pose>0 -0.078 0.036 0 -0 0</pose>
         <mass>0.25</mass>
-        <inertia>
-          <ixx>0.000037</ixx>
-          <ixy>-0.000000049</ixy>
-          <ixz>0.0</ixz>
+        <inertia
+          ixx="0.000037"
+          ixy="-0.000000049"
+          ixz="0.0</ixz>
           
-          <iyy>0.00026</iyy>
-          <iyz>0.0</iyz>
+          iyy="0.00026"
+          iyz="0.0"
           
-          <izz>0.00027</izz>
-          </inertia>
+          izz="0.00027"
+          />
       </inertial>
     </link>
 </xacro:macro>
