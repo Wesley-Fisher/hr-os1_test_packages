@@ -12,10 +12,7 @@
       <visual name='body_structure_visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Body_Structure.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Body_Structure.stl"/>
         </geometry>
         <material>
           <script>
@@ -34,9 +31,9 @@
         </geometry>
       </collision>
       
-      <inertial
-        <pose>0 -0.065 0.082 0 -0 0</pose>
-        <mass>0.273</mass>
+      <inertial>
+        <origin xyz="0 -0.065 0.082" rpy=" 0 -0 0"/>
+        <mass value="0.273"/>
         <inertia
           ixx="0.00074"
           ixy="-0.0000022"
@@ -76,9 +73,9 @@
         </material>
       </visual>
       
-      <inertial
-        <pose>0 -0.055 0.086 0 -0 0</pose>
-        <mass>0.221</mass>
+      <inertial>
+        <origin xyz="0 -0.055 0.086" rpy=" 0 -0 0"/>
+        <mass value="0.221"/>
         <inertia
           ixx="0.000056"
           ixy="0.000000068"
@@ -118,12 +115,12 @@
       </visual>
       
       <inertial>
-        <pose>0 -0.078 0.036 0 -0 0</pose>
-        <mass>0.25</mass>
+        <origin xyz="0 -0.078 0.036" rpy=" 0 -0 0"/>
+        <mass value="0.25"/>
         <inertia
           ixx="0.000037"
           ixy="-0.000000049"
-          ixz="0.0</ixz>
+          ixz="0.0"
           
           iyy="0.00026"
           iyz="0.0"

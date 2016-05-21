@@ -16,6 +16,7 @@
     <xacro:body_links />
     <xacro:body_joints />
     
+    <!--
     <xacro:neck_links />
     <xacro:neck_joints />
     
@@ -28,5 +29,6 @@
     <xacro:right_arm_joints />
     <xacro:right_leg_links />
     <xacro:right_leg_joints />
+    -->
 
 </robot>
