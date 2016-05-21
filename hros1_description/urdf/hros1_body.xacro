@@ -14,12 +14,14 @@
         <geometry>
           <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Body_Structure.stl"/>
         </geometry>
+        <!--
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Grey</name>
           </script>
         </material>
+        -->
       </visual>
       
       <collision name="collision">
@@ -62,12 +64,14 @@
         <geometry>
           <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Body_Servos.stl"/>
         </geometry>
+        <!--
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Grey</name>
           </script>
         </material>
+        -->
       </visual>
       
       <inertial>
@@ -100,12 +104,14 @@
         <geometry>
           <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Body_Battery.stl"/>
         </geometry>
+        <!--
         <material>
           <script>
             <uri>file://media/materials/scripts/gazebo.material</uri>
             <name>Gazebo/Grey</name>
           </script>
         </material>
+        -->
       </visual>
       
       <inertial>
