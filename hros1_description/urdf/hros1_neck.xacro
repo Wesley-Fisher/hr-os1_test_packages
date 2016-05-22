@@ -23,7 +23,7 @@
       </collision>
       
       <inertial>
-        <mass>0.127</mass>
+        <mass value="0.127"/>
         <inertia
           ixx="0.000036"
           ixy="0.00000050"
