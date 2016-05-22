@@ -119,7 +119,7 @@
       <visual name='neck_link_2_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Neck_Link_2.stl"/>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Neck_Link_2.stl"/>
         </geometry>
       </visual>
       
