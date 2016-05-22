@@ -184,10 +184,10 @@
   </joint>
 
 
-  <joint name="neck_base_platform_free_joint" type="revolute">
+  <joint name="neck_base_platform_free_joint" type="continuous">
     <parent link="neck_base_link"/>
     <child link="neck_base_platform_link"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <limit effort="0" velocity="1" upper="3.1415" lower="-3.1415"/>
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
@@ -195,20 +195,20 @@
   </joint>
   
 
-  <joint name="neck_pitch_1_free_joint" type="revolute">
+  <joint name="neck_pitch_1_free_joint" type="continuous">
     <parent link="neck_base_link"/>
     <child link="neck_link_1_link"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <limit effort="0" velocity="1" upper="3.1415" lower="-3.1415"/>
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
     <origin xyz="0 -0.105 0.19" rpy="0 0 0"/>
   </joint>
   
-  <joint name="neck_pitch_2_free_joint" type="revolute">
+  <joint name="neck_pitch_2_free_joint" type="continuous">
     <parent link="neck_link_1_link"/>
     <child link="neck_link_2_link"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <limit effort="0" velocity="1" upper="3.1415" lower="-3.1415"/>
     <axis>
       <xyz>1 0 0</xyz>
     </axis>

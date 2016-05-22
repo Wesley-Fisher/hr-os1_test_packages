@@ -119,10 +119,6 @@
     <child link="body_servos_link"/>
     <axis>
       <xyz>0 0 1</xyz>
-        <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-        </limit>
     </axis>
   </joint>
   
@@ -131,10 +127,6 @@
     <child link="body_battery_link"/>
     <axis>
       <xyz>0 1 0</xyz>
-        <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-        </limit>
     </axis>
   </joint>
 </xacro:macro>

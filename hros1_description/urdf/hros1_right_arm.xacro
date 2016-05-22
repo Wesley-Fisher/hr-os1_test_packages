@@ -147,15 +147,11 @@
   </joint>
   
   
-  <joint name="right_shoulder-elbow_fixed_joint" type="revolute">
+  <joint name="right_shoulder-elbow_fixed_joint" type="fixed">
     <parent link="right_arm_upper_servo_link"/>
     <child link="right_arm_elbow_link"/>
     <axis>
       <xyz>0 1 0</xyz>
-      <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-      </limit>
     </axis>
   </joint>
   
