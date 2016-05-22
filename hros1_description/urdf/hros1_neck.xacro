@@ -4,29 +4,26 @@ test
 <xacro:macro name="neck_links">
     <!--  ATTACHED TO TOP OF BODY -->
     <link name='HR-OS1::neck_link_1_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='neck_link_1_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0 0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Neck_Link_1.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Neck_Link_1.stl"/>
         </geometry>
         <material>
           <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <uri>file://media/materials/scripts/gazebo.material"
             <name>Gazebo/Grey</name>
           </script>
         </material>
       </visual>
       
       <inertial>
-        <pose>0 -0.101 0.208 0 -0 0</pose>
+        <origin xyz="0 -0.101 0.208 0 -0 0"/>
         <mass>0.005</mass>
         <inertia>
           <ixx>0.0000012</ixx>
@@ -50,7 +47,7 @@ test
     <axis>
       <xyz>0 0 1</xyz>
     </axis>
-    <pose>0 -0.045 0 0 0 0</pose>
+    <origin xyz="0 -0.045 0" rpy="0 0 0"/>
   </joint>
 
 
@@ -60,7 +57,7 @@ test
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <pose>0 -0.046 0.2 0 0 0</pose>
+    <origin xyz="0 -0.046 0.2" rpy="0 0 0"/>
   </joint>
   
 
@@ -70,7 +67,7 @@ test
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <pose>0 -0.105 0.19 0 0 0</pose>
+    <origin xyz="0 -0.105 0.19" rpy="0 0 0"/>
   </joint>
   
   <joint name="neck_pitch_2_free_joint" type="revolute">
@@ -79,7 +76,7 @@ test
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <pose>0 -0.105 0.23 0 0 0</pose>
+    <origin xyz="0 -0.105 0.23" rpy="0 0 0"/>
   </joint>
   
   
@@ -89,7 +86,7 @@ test
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
-    <pose>0 -0.07 0.23 0 0 0</pose>
+    <origin xyz="0 -0.07 0.23" rpy="0 0 0"/>
   </joint>
 </xacro:macro>
 </robot>
