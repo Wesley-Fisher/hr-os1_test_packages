@@ -12,7 +12,7 @@
       <visual name='neck_head_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Neck_Head_Servo.stl"/>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Neck_Head_Servo.stl"/>
         </geometry>
       </visual>
       <collision name="collision">
@@ -50,7 +50,7 @@
       <visual name='neck_base_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Neck_Base.stl"/>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Neck_Base.stl"/>
         </geometry>
       </visual>
       
