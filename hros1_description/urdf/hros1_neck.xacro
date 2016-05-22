@@ -87,10 +87,7 @@
       <collision name="collision">
         <origin xyz="0 -0.046 0.20955" rpy="0 0 0"/>
         <geometry>
-          <cylinder>
-            <radius>0.02</radius>
-            <length>0.0025</length>
-          </cylinder>
+          <cylinder radius="0.02" length="0.0025"/>
         </geometry>
       </collision>
       
