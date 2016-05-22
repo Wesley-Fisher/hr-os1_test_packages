@@ -3,158 +3,122 @@
 <xacro:macro name="right_leg_links">
 	<!-- RIGHT Upper HIP  -->
     <link name='HR-OS1::right_leg_upper_hip_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='right_leg_upper_hip_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Yaw_Link.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Yaw_Link.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>-0.039 -0.062 0.011 0 -0 0</pose>
-        <mass>0.017</mass>
-        <inertia>
-          <ixx>0.000016</ixx>
-          <ixy>0.0</ixy>
-          <ixz>0.0</ixz>
+        <origin xyz="-0.039 -0.062 0.011" rpy="0 -0 0"/>
+        <mass value="0.017"/>
+        <inertia
+          ixx="0.000016"
+          <ixy="0.0"
+          ixz="0.0"
           
-          <iyy>0.0000035</iyy>
-          <iyz>0.0</iyz>
+          iyy="0.0000035"
+          iyz="0.0"
           
-          <izz>0.000015</izz>
-          </inertia>
+          izz="0.000015"
+          />
       </inertial>
     </link>  
 
 <!-- RIGHT HIP  -->
     <link name='HR-OS1::right_leg_lower_hip_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='right_leg_lower_hip_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Hip_Joint.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Hip_Joint.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>-0.039 -0.062 -0.024 0 -0 0</pose>
-        <mass>0.110</mass>
-        <inertia>
-          <ixx>0.000058</ixx>
-          <ixy>0.00000045</ixy>
-          <ixz>0.00000027</ixz>
+        <origin xyz="-0.039 -0.062 -0.024" rpy="0 -0 0"/>
+        <mass value="0.110"/>
+        <inertia
+          ixx="0.000058"
+          <ixy="0.00000045"
+          ixz="0.00000027"
           
-          <iyy>0.000029</iyy>
-          <iyz>0.00000024</iyz>
+          iyy="0.000029"
+          iyz="0.00000024"
           
-          <izz>0.000046</izz>
-          </inertia>
+          izz="0.000046"
+          />
       </inertial>
     </link> 
 
 
 <!-- RIGHT THIGH  -->
     <link name='HR-OS1::right_leg_thigh_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='right_leg_thigh_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Thigh.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Thigh.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>-0.039 -0.034 -0.053 0 -0 0</pose>
-        <mass>0.028</mass>
-        <inertia>
-          <ixx>0.000016</ixx>
-          <ixy>0.0</ixy>
-          <ixz>0.0</ixz>
+        <origin xyz="-0.039 -0.034 -0.053" rpy="0 -0 0"/>
+        <mass value="0.028"/>
+        <inertia
+          ixx="0.000016"
+          <ixy="0.0"
+          ixz="0.0"
           
-          <iyy>0.000023</iyy>
-          <iyz>-0.000002</iyz>
+          iyy="0.000023"
+          iyz="-0.000002"
           
-          <izz>0.000013</izz>
-          </inertia>
+          izz="0.000013"
+          />
       </inertial>
     </link>
 
 <!-- RIGHT KNEE  -->
     <link name='HR-OS1::right_leg_knee_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='right_leg_knee_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Knee.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Knee.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>-0.038 -0.027 -0.091 0 -0 0</pose>
-        <mass>0.055</mass>
-        <inertia>
-          <ixx>0.000013</ixx>
-          <ixy>0.00000025</ixy>
-          <ixz>0.000000071</ixz>
+        <origin xyz="-0.038 -0.027 -0.091" rpy="0 -0 0"/>
+        <mass value="0.055"/>
+        <inertia
+          ixx="0.000013"
+          <ixy="0.00000025"
+          ixz="0.000000071"
           
-          <iyy>0.0000090</iyy>
-          <iyz>-0.0000019</iyz>
+          iyy="0.0000090"
+          iyz="-0.0000019"
           
-          <izz>0.000015</izz>
-          </inertia>
+          izz="0.000015"
+          />
       </inertial>
     </link>
 
@@ -162,106 +126,78 @@
 
 <!-- RIGHT SHIN  -->
     <link name='HR-OS1::right_leg_shin_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='right_leg_shin_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Shin.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Shin.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>-0.039 -0.035 -0.125 0 -0 0</pose>
-        <mass>0.021</mass>
-        <inertia>
-          <ixx>0.0000094</ixx>
-          <ixy>0.0</ixy>
-          <ixz>0.0</ixz>
+        <origin xyz="-0.039 -0.035 -0.125" rpy="0 -0 0"/>
+        <mass value="0.021"/>
+        <inertia
+          ixx="0.0000094"
+          <ixy="0.0"
+          ixz="0.0"
           
-          <iyy>0.000014</iyy>
-          <iyz>0.0000018</iyz>
+          iyy="0.000014"
+          iyz="0.0000018"
           
-          <izz>0.0000088</izz>
-          </inertia>
+          izz="0.0000088"
+          />
       </inertial>
     </link>
 
 <!-- RIGHT ANKLE  -->
     <link name='HR-OS1::right_leg_ankle_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='right_leg_ankle_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Ankle_Joint.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Ankle_Joint.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
-      </visual>
-      
+      </visual> 
       <inertial>
-        <pose>-0.039 -0.062 -0.147 0 -0 0</pose>
-        <mass>0.110</mass>
-        <inertia>
-          <ixx>0.000058</ixx>
-          <ixy>0.00000051</ixy>
-          <ixz>-0.00000024</ixz>
+        <origin xyz="-0.039 -0.062 -0.147" rpy="0 -0 0"/>
+        <mass value="0.110"/>
+        <inertia
+          ixx="0.000058"
+          <ixy="0.00000051"
+          ixz="-0.00000024"
           
-          <iyy>0.000029</iyy>
-          <iyz>-0.00000027</iyz>
+          iyy="0.000029"
+          iyz="-0.00000027"
           
-          <izz>0.000046</izz>
-          </inertia>
+          izz="0.000046"
+          />
       </inertial>
     </link>
 
 <!-- RIGHT FOOT  -->
     <link name='HR-OS1::right_leg_foot_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='right_leg_foot_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Foot.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Foot.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       <collision name="collision">
-        <pose> 0.05 -0.05 -0.195 0 0 0 </pose>
+        <origin xyz=" 0.05 -0.05 -0.195" rpy="0 0 0 "/>
         <geometry>
           <box>
             <size>0.065 .1 0.01</size>
@@ -270,66 +206,70 @@
       </collision>
       
       <inertial>
-        <pose>-0.046 -0.052 -0.188 0 -0 0</pose>
-        <mass>0.067</mass>
-        <inertia>
-          <ixx>0.00006</ixx>
-          <ixy>-0.0000017</ixy>
-          <ixz>-0.0000011</ixz>
+        <origin xyz="-0.046 -0.052 -0.188" rpy="0 -0 0"/>
+        <mass value="0.067"/>
+        <inertia
+          ixx="0.00006"
+          <ixy="-0.0000017"
+          ixz="-0.0000011"
           
-          <iyy>0.000026</iyy>
-          <iyz>-0.0000014</iyz>
+          iyy="0.000026"
+          iyz="-0.0000014"
           
-          <izz>0.00008</izz>
-          </inertia>
+          izz="0.00008"
+          />
       </inertial>
     </link>
 </xacro:macro>
 
 <xacro:macro name="right_leg_joints">
 <joint name="right_hip_yaw_powered_joint" type="revolute">
-    <parent>HR-OS1::body_structure_link</parent>
-    <child>HR-OS1::right_leg_upper_hip_link</child>
+    <parent link="HR-OS1::body_structure_link"/>
+    <child link="HR-OS1::right_leg_upper_hip_link"/>
     <axis>
       <xyz>0 0 -1</xyz>
     </axis>
-    <pose>0.040 -0.045 0 0 0 0</pose>
+    <origin xyz="0.040 -0.045 0" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
   
   <joint name="right_hip_roll_powered_joint" type="revolute">
-    <parent>HR-OS1::right_leg_upper_hip_link</parent>
-    <child>HR-OS1::right_leg_lower_hip_link</child>
+    <parent link="HR-OS1::right_leg_upper_hip_link"/>
+    <child link="HR-OS1::right_leg_lower_hip_link"/>
     <axis>
       <xyz>0 1 0</xyz>
     </axis>
-    <pose>0.040 -0.045 -0.01 0 0 0</pose>
+    <origin xyz="0.040 -0.045 -0.01" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
   
   <joint name="right_hip_pitch_powered_joint" type="revolute">
-    <parent>HR-OS1::right_leg_lower_hip_link</parent>
-    <child>HR-OS1::right_leg_thigh_link</child>
+    <parent link="HR-OS1::right_leg_lower_hip_link"/>
+    <child link="HR-OS1::right_leg_thigh_link"/>
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
-    <pose>0.040 -0.045 -0.01 0 0 0</pose>
+    <origin xyz="0.040 -0.045 -0.01" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
   
   <joint name="right_knee_pitch_powered_joint" type="revolute">
-    <parent>HR-OS1::right_leg_thigh_link</parent>
-    <child>HR-OS1::right_leg_knee_link</child>
+    <parent link="HR-OS1::right_leg_thigh_link"/>
+    <child link="HR-OS1::right_leg_knee_link"/>
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <pose>0.015 -0.04 -0.09 0 0 0</pose>
+    <origin xyz="0.015 -0.04 -0.09" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
   
   <joint name="right_knee-shin_fixed_joint" type="revolute">
-    <parent>HR-OS1::right_leg_knee_link</parent>
-    <child>HR-OS1::right_leg_shin_link</child>
+    <parent link="HR-OS1::right_leg_knee_link"/>
+    <child link="HR-OS1::right_leg_shin_link"/>
     <axis>
       <xyz>1 0 0</xyz>
       <limit>
@@ -337,27 +277,30 @@
           <upper>0</upper>
       </limit>
     </axis>
-    <pose>0.015 -0.04 -0.09 0 0 0</pose>
+    <origin xyz="0.015 -0.04 -0.09" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
   
   <joint name="right_ankle_pitch_powered_joint" type="revolute">
-    <parent>HR-OS1::right_leg_shin_link</parent>
-    <child>HR-OS1::right_leg_ankle_link</child>
+    <parent link="HR-OS1::right_leg_shin_link"/>
+    <child link="HR-OS1::right_leg_ankle_link"/>
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <pose>0.015 -0.045 -0.16 0 0 0</pose>
+    <origin xyz="0.015 -0.045 -0.16" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
   
   <joint name="right_ankle_roll_powered_joint" type="revolute">
-    <parent>HR-OS1::right_leg_ankle_link</parent>
-    <child>HR-OS1::right_leg_foot_link</child>
+    <parent link="HR-OS1::right_leg_ankle_link"/>
+    <child link="HR-OS1::right_leg_foot_link"/>
     <axis>
       <xyz>0 -1 0</xyz>
     </axis>
-    <pose>0.04 -0.045 -0.16 0 0 0</pose>
+    <origin xyz="0.04 -0.045 -0.16" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
 </xacro:macro>
 </robot>

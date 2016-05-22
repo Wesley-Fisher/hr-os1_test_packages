@@ -3,40 +3,31 @@
 <xacro:macro name="left_arm_links">
 <!--  LEFT ARM SHOULDER  -->
     <link name='HR-OS1::left_arm_shoulder_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='left_arm_shoulder_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Left_Arm_Shoulder.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Left_Arm_Shoulder.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>0.068 -0.052 0.131 0 -0 0</pose>
-        <mass>0.011</mass>
-        <inertia>
-          <ixx>0.0000051</ixx>
-          <ixy>0.0</ixy>
-          <ixz>0.00000058</ixz>
+        <origin xyz="0.068 -0.052 0.131" rpy="0 -0 0"/>
+        <mass value="0.011"/>
+        <inertia
+          ixx="0.0000051"
+          ixy="0.0"
+          ixz="0.00000058"
           
-          <iyy>0.0000023</iyy>
-          <iyz>0.0</iyz>
+          iyy="0.0000023"
+          iyz="0.0"
           
-          <izz>0.000005</izz>
-          </inertia>
+          izz="0.000005"
+          />
       </inertial>
     </link> 
 
@@ -44,148 +35,123 @@
 
 <!--  LEFT ARM UPPER SERVO  -->
     <link name='HR-OS1::left_arm_upper_servo_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0 0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='left_arm_upper_servo_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Left_Arm_Upper_Servo.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Left_Arm_Upper_Servo.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>0.085 -0.051 0.106 0 -0 0</pose>
-        <mass>0.055</mass>
-        <inertia>
-          <ixx>0.000015</ixx>
-          <ixy>0.000000062</ixy>
-          <ixz>0.0000017</ixz>
+        <origin xyz="0.085 -0.051 0.106" rpy="0 -0 0"/>
+        <mass value="0.055"/>
+        <inertia
+          ixx="0.000015"
+          ixy="0.000000062"
+          ixz="0.0000017"
           
-          <iyy>0.000013</iyy>
-          <iyz>-0.00000025</iyz>
+          iyy="0.000013"
+          iyz="-0.00000025"
           
-          <izz>0.0000089</izz>
-          </inertia>
+          izz="0.0000089"
+          />
       </inertial>
     </link>
 
 
 <!--  LEFT ARM Elbow  -->
     <link name='HR-OS1::left_arm_elbow_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='left_arm_elbow_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Left_Arm_Elbow_Link.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Left_Arm_Elbow_Link.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>0.093 -0.050 0.072 0 -0 0</pose>
-        <mass>0.016</mass>
-        <inertia>
-          <ixx>0.0000036</ixx>
-          <ixy>0.00000016</ixy>
-          <ixz>-0.00000062</ixz>
+        <origin xyz="0.093 -0.050 0.072" rpy="0 -0 0"/>
+        <mass value="0.016"/>
+        <inertia
+          ixx="0.0000036"
+          ixy="0.00000016"
+          ixz="-0.00000062"
           
-          <iyy>0.0000056</iyy>
-          <iyz>-0.00000064</iyz>
+          iyy="0.0000056"
+          iyz="-0.00000064"
           
-          <izz>0.0000058</izz>
-          </inertia>
+          izz="0.0000058"
+          />
       </inertial>
     </link>
 
 
 <!--  LEFT ARM FOREARM SERVO  -->
     <link name='HR-OS1::left_arm_forearm_servo_link'>
-      <pose>0 0 0 0 -0 0</pose>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
 
       <visual name='left_arm_forearm_servo_visual'>
-        <pose>0 0 0 0 -0 0</pose>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh>
-            <uri>model://HR-OS1/meshes/HROS1_Simple - Left_Arm_Forearm_Servo.stl</uri>
-            <scale>1 1 1</scale>
-          </mesh>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Left_Arm_Forearm_Servo.stl"/>
         </geometry>
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
       </visual>
       
       <inertial>
-        <pose>0.100 -0.028 0.047 0 -0 0</pose>
-        <mass>0.055</mass>
-        <inertia>
-          <ixx>0.000013</ixx>
-          <ixy>0.0000011</ixy>
-          <ixz>0.00000051</ixz>
+        <origin xyz="0.100 -0.028 0.047" rpy="0 -0 0"/>
+        <mass value="0.055"/>
+        <inertia
+          ixx="0.000013"
+          ixy="0.0000011"
+          ixz="0.00000051"
           
-          <iyy>0.000012</iyy>
-          <iyz>-0.0000034</iyz>
+          iyy="0.000012"
+          iyz="-0.0000034"
           
-          <izz>0.000012</izz>
-          </inertia>
+          izz="0.000012"
+          />
       </inertial>
     </link>
 </xacro:macro>
 
 <xacro:macro name="left_arm_joints">
   <joint name="left_shoulder_pitch_powered_joint" type="revolute">
-    <parent>HR-OS1::body_structure_link</parent>
-    <child>HR-OS1::left_arm_shoulder_link</child>
+    <parent link="HR-OS1::body_structure_link"/>
+    <child link="HR-OS1::left_arm_shoulder_link"/>
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
-    <pose>0 -0.05 0.13 0 0 0</pose>
+    <origin xyz="0 -0.05 0.13" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
   
   <joint name="left_shoulder_roll_powered_joint" type="revolute">
-    <parent>HR-OS1::left_arm_shoulder_link</parent>
-    <child>HR-OS1::left_arm_upper_servo_link</child>
+    <parent link="HR-OS1::left_arm_shoulder_link"/>
+    <child link="HR-OS1::left_arm_upper_servo_link"/>
     <axis>
       <xyz>0 -1 0</xyz>
     </axis>
-    <pose>-0.085 -0.05 0.115 0 0 0</pose>
+    <origin xyz="-0.085 -0.05 0.115" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
   
   <joint name="left_shoulder-elbow_fixed_joint" type="revolute">
-    <parent>HR-OS1::left_arm_upper_servo_link</parent>
-    <child>HR-OS1::left_arm_elbow_link</child>
+    <parent link="HR-OS1::left_arm_upper_servo_link"/>
+    <child link="HR-OS1::left_arm_elbow_link"/>
     <axis>
       <xyz>0 1 0</xyz>
       <limit>
@@ -196,12 +162,13 @@
   </joint>
   
   <joint name="left_elbow_powered_joint" type="revolute">
-    <parent>HR-OS1::left_arm_elbow_link</parent>
-    <child>HR-OS1::left_arm_forearm_servo_link</child>
+    <parent link="HR-OS1::left_arm_elbow_link"/>
+    <child link="HR-OS1::left_arm_forearm_servo_link"/>
     <axis>
       <xyz>1 0 -0.25</xyz>
     </axis>
-    <pose>0 -0.037 0.03 0 0 0</pose>
+    <origin xyz="0 -0.037 0.03" rpy="0 0 0"/>
+    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
 </xacro:macro>
 </robot>
