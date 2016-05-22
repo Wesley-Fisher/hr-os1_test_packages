@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 <xacro:macro name="left_arm_links">
 <!--  LEFT ARM SHOULDER  -->
-    <link name='HR-OS1::left_arm_shoulder_link'>
+    <link name='left_arm_shoulder_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -34,7 +34,7 @@
 
 
 <!--  LEFT ARM UPPER SERVO  -->
-    <link name='HR-OS1::left_arm_upper_servo_link'>
+    <link name='left_arm_upper_servo_link'>
       <origin xyz="0 0 0 0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -65,7 +65,7 @@
 
 
 <!--  LEFT ARM Elbow  -->
-    <link name='HR-OS1::left_arm_elbow_link'>
+    <link name='left_arm_elbow_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -96,7 +96,7 @@
 
 
 <!--  LEFT ARM FOREARM SERVO  -->
-    <link name='HR-OS1::left_arm_forearm_servo_link'>
+    <link name='left_arm_forearm_servo_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -128,8 +128,8 @@
 
 <xacro:macro name="left_arm_joints">
   <joint name="left_shoulder_pitch_powered_joint" type="revolute">
-    <parent link="HR-OS1::body_structure_link"/>
-    <child link="HR-OS1::left_arm_shoulder_link"/>
+    <parent link="body_structure_link"/>
+    <child link="left_arm_shoulder_link"/>
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
@@ -139,8 +139,8 @@
   
   
   <joint name="left_shoulder_roll_powered_joint" type="revolute">
-    <parent link="HR-OS1::left_arm_shoulder_link"/>
-    <child link="HR-OS1::left_arm_upper_servo_link"/>
+    <parent link="left_arm_shoulder_link"/>
+    <child link="left_arm_upper_servo_link"/>
     <axis>
       <xyz>0 -1 0</xyz>
     </axis>
@@ -150,8 +150,8 @@
   
   
   <joint name="left_shoulder-elbow_fixed_joint" type="revolute">
-    <parent link="HR-OS1::left_arm_upper_servo_link"/>
-    <child link="HR-OS1::left_arm_elbow_link"/>
+    <parent link="left_arm_upper_servo_link"/>
+    <child link="left_arm_elbow_link"/>
     <axis>
       <xyz>0 1 0</xyz>
       <limit>
@@ -162,8 +162,8 @@
   </joint>
   
   <joint name="left_elbow_powered_joint" type="revolute">
-    <parent link="HR-OS1::left_arm_elbow_link"/>
-    <child link="HR-OS1::left_arm_forearm_servo_link"/>
+    <parent link="left_arm_elbow_link"/>
+    <child link="left_arm_forearm_servo_link"/>
     <axis>
       <xyz>1 0 -0.25</xyz>
     </axis>

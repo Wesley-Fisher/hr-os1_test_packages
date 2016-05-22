@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 <xacro:macro name="right_leg_links">
 	<!-- RIGHT Upper HIP  -->
-    <link name='HR-OS1::right_leg_upper_hip_link'>
+    <link name='right_leg_upper_hip_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -32,7 +32,7 @@
     </link>  
 
 <!-- RIGHT HIP  -->
-    <link name='HR-OS1::right_leg_lower_hip_link'>
+    <link name='right_leg_lower_hip_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -63,7 +63,7 @@
 
 
 <!-- RIGHT THIGH  -->
-    <link name='HR-OS1::right_leg_thigh_link'>
+    <link name='right_leg_thigh_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -93,7 +93,7 @@
     </link>
 
 <!-- RIGHT KNEE  -->
-    <link name='HR-OS1::right_leg_knee_link'>
+    <link name='right_leg_knee_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -125,7 +125,7 @@
 
 
 <!-- RIGHT SHIN  -->
-    <link name='HR-OS1::right_leg_shin_link'>
+    <link name='right_leg_shin_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -155,7 +155,7 @@
     </link>
 
 <!-- RIGHT ANKLE  -->
-    <link name='HR-OS1::right_leg_ankle_link'>
+    <link name='right_leg_ankle_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -184,7 +184,7 @@
     </link>
 
 <!-- RIGHT FOOT  -->
-    <link name='HR-OS1::right_leg_foot_link'>
+    <link name='right_leg_foot_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -224,8 +224,8 @@
 
 <xacro:macro name="right_leg_joints">
 <joint name="right_hip_yaw_powered_joint" type="revolute">
-    <parent link="HR-OS1::body_structure_link"/>
-    <child link="HR-OS1::right_leg_upper_hip_link"/>
+    <parent link="body_structure_link"/>
+    <child link="right_leg_upper_hip_link"/>
     <axis>
       <xyz>0 0 -1</xyz>
     </axis>
@@ -235,8 +235,8 @@
   
   
   <joint name="right_hip_roll_powered_joint" type="revolute">
-    <parent link="HR-OS1::right_leg_upper_hip_link"/>
-    <child link="HR-OS1::right_leg_lower_hip_link"/>
+    <parent link="right_leg_upper_hip_link"/>
+    <child link="right_leg_lower_hip_link"/>
     <axis>
       <xyz>0 1 0</xyz>
     </axis>
@@ -246,8 +246,8 @@
   
   
   <joint name="right_hip_pitch_powered_joint" type="revolute">
-    <parent link="HR-OS1::right_leg_lower_hip_link"/>
-    <child link="HR-OS1::right_leg_thigh_link"/>
+    <parent link="right_leg_lower_hip_link"/>
+    <child link="right_leg_thigh_link"/>
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
@@ -257,8 +257,8 @@
   
   
   <joint name="right_knee_pitch_powered_joint" type="revolute">
-    <parent link="HR-OS1::right_leg_thigh_link"/>
-    <child link="HR-OS1::right_leg_knee_link"/>
+    <parent link="right_leg_thigh_link"/>
+    <child link="right_leg_knee_link"/>
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
@@ -268,8 +268,8 @@
   
   
   <joint name="right_knee-shin_fixed_joint" type="revolute">
-    <parent link="HR-OS1::right_leg_knee_link"/>
-    <child link="HR-OS1::right_leg_shin_link"/>
+    <parent link="right_leg_knee_link"/>
+    <child link="right_leg_shin_link"/>
     <axis>
       <xyz>1 0 0</xyz>
       <limit>
@@ -283,8 +283,8 @@
   
   
   <joint name="right_ankle_pitch_powered_joint" type="revolute">
-    <parent link="HR-OS1::right_leg_shin_link"/>
-    <child link="HR-OS1::right_leg_ankle_link"/>
+    <parent link="right_leg_shin_link"/>
+    <child link="right_leg_ankle_link"/>
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
@@ -294,8 +294,8 @@
   
   
   <joint name="right_ankle_roll_powered_joint" type="revolute">
-    <parent link="HR-OS1::right_leg_ankle_link"/>
-    <child link="HR-OS1::right_leg_foot_link"/>
+    <parent link="right_leg_ankle_link"/>
+    <child link="right_leg_foot_link"/>
     <axis>
       <xyz>0 -1 0</xyz>
     </axis>

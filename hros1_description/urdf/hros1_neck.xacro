@@ -3,7 +3,7 @@
 
 <!--  NECK Head (Pitch Servo) -->
 <!--  ATTACHED TO BACK OF HEAD  -->
-    <link name='HR-OS1::neck_head_link'>
+    <link name='neck_head_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>1</self_collide>
@@ -41,7 +41,7 @@
 
 <!--  NECK Base (YAW SERVO) -->
 <!--  ATTACHED TO BACK OF HEAD  -->
-    <link name='HR-OS1::neck_base_link'>
+    <link name='neck_base_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -72,7 +72,7 @@
 
 <!--  Neck Head Platform  -->
 <!--  Supports to head; should be able to tilt  -->
-    <link name='HR-OS1::neck_base_platform_link'>
+    <link name='neck_base_platform_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>1</self_collide>
@@ -110,7 +110,7 @@
 
 <!--  NECK Link 2  -->
 <!--  ATTACHED TO Head Servo  -->
-    <link name='HR-OS1::neck_link_2_link'>
+    <link name='neck_link_2_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -141,7 +141,7 @@
 
 <xacro:macro name="neck_links">
     <!--  ATTACHED TO TOP OF BODY -->
-    <link name='HR-OS1::neck_link_1_link'>
+    <link name='neck_link_1_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -174,8 +174,8 @@
 
 <xacro:macro name="neck_joints">
   <joint name="neck_yaw_powered_joint" type="revolute">
-    <parent link="HR-OS1::body_structure_link"/>
-    <child link="HR-OS1::neck_base_link"/>
+    <parent link="body_structure_link"/>
+    <child link="neck_base_link"/>
     <limit effort="1" velocity="1" lower="-3.1415" upper="3.1415"/>
     <axis>
       <xyz>0 0 1</xyz>
@@ -185,8 +185,8 @@
 
 
   <joint name="neck_base_platform_free_joint" type="revolute">
-    <parent link="HR-OS1::neck_base_link"/>
-    <child link="HR-OS1::neck_base_platform_link"/>
+    <parent link="neck_base_link"/>
+    <child link="neck_base_platform_link"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
     <axis>
       <xyz>1 0 0</xyz>
@@ -196,8 +196,8 @@
   
 
   <joint name="neck_pitch_1_free_joint" type="revolute">
-    <parent link="HR-OS1::neck_base_link"/>
-    <child link="HR-OS1::neck_link_1_link"/>
+    <parent link="neck_base_link"/>
+    <child link="neck_link_1_link"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
     <axis>
       <xyz>1 0 0</xyz>
@@ -206,8 +206,8 @@
   </joint>
   
   <joint name="neck_pitch_2_free_joint" type="revolute">
-    <parent link="HR-OS1::neck_link_1_link"/>
-    <child link="HR-OS1::neck_link_2_link"/>
+    <parent link="neck_link_1_link"/>
+    <child link="neck_link_2_link"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
     <axis>
       <xyz>1 0 0</xyz>
@@ -217,8 +217,8 @@
   
   
   <joint name="neck_pitch_main_powered_joint" type="revolute">
-    <parent link="HR-OS1::neck_link_2_link"/>
-    <child link="HR-OS1::neck_head_link"/>
+    <parent link="neck_link_2_link"/>
+    <child link="neck_head_link"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
     <axis>
       <xyz>-1 0 0</xyz>

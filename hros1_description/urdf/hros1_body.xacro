@@ -3,7 +3,7 @@
 <xacro:macro name="body_links">
 <!--  MAIN BODY  -->
 <!--  MAIN LINK  -->
-    <link name='HR-OS1::body_structure_link'>
+    <link name='body_structure_link'>
       
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -51,7 +51,7 @@
 
 <!--  SERVOS ON BODY  -->
 <!--  JOINTS CONNECTED HERE  -->
-    <link name='HR-OS1::body_servos_link'>
+    <link name='body_servos_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -83,7 +83,7 @@
 
 <!--  MAIN BATTERY  -->
 <!--  ADDED FOR WEIGHT  -->
-    <link name='HR-OS1::body_battery_link'>
+    <link name='body_battery_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>0</gravity>
       <self_collide>0</self_collide>
@@ -115,8 +115,8 @@
 
 <xacro:macro name="body_joints">
 <joint name="body-servos_fixture_joint" type="fixed">
-    <parent link="HR-OS1::body_structure_link"/>
-    <child link="HR-OS1::body_servos_link"/>
+    <parent link="body_structure_link"/>
+    <child link="body_servos_link"/>
     <axis>
       <xyz>0 0 1</xyz>
         <limit>
@@ -127,8 +127,8 @@
   </joint>
   
   <joint name="body-battery_fixture_joint" type="fixed">
-    <parent link="HR-OS1::body_structure_link"/>
-    <child link="HR-OS1::body_battery_link"/>
+    <parent link="body_structure_link"/>
+    <child link="body_battery_link"/>
     <axis>
       <xyz>0 1 0</xyz>
         <limit>

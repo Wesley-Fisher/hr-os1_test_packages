@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 <xacro:macro name="left_leg_links">
 <!-- LEFT Upper HIP  -->
-    <link name='HR-OS1::left_leg_upper_hip_link'>
+    <link name='left_leg_upper_hip_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -32,7 +32,7 @@
     </link>  
 
 <!-- LEFT LOWER HIP  -->
-    <link name='HR-OS1::left_leg_lower_hip_link'>
+    <link name='left_leg_lower_hip_link'>
       <origin xyz="0 0 0 0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -63,7 +63,7 @@
 
 
 <!-- LEFT THIGH  -->
-    <link name='HR-OS1::left_leg_thigh_link'>
+    <link name='left_leg_thigh_link'>
       <origin xyz="0 0 0 0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -93,7 +93,7 @@
     </link>
 
 <!-- LEFT KNEE  -->
-    <link name='HR-OS1::left_leg_knee_link'>
+    <link name='left_leg_knee_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -125,7 +125,7 @@
 
 
 <!-- LEFT SHIN  -->
-    <link name='HR-OS1::left_leg_shin_link'>
+    <link name='left_leg_shin_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -155,7 +155,7 @@
     </link>
 
 <!-- LEFT ANKLE  -->
-    <link name='HR-OS1::left_leg_ankle_link'>
+    <link name='left_leg_ankle_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -185,7 +185,7 @@
     </link>
 
 <!-- LEFT FOOT  -->
-    <link name='HR-OS1::left_leg_foot_link'>
+    <link name='left_leg_foot_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
       <self_collide>0</self_collide>
@@ -201,9 +201,7 @@
       <collision name="collision">
         <origin xyz=" -0.05 -0.05 -0.195" rpy="0 0 0 "/>
         <geometry>
-          <box>
-            <size>0.065 .1 0.01</size>
-          </box>
+          <box size="0.065 .1 0.01"/>
         </geometry>
       </collision>
       
@@ -226,8 +224,8 @@
 
 <xacro:macro name="left_leg_joints">
   <joint name="left_hip_yaw_powered_joint" type="revolute">
-    <parent link="HR-OS1::body_structure_link"/>
-    <child link="HR-OS1::left_leg_upper_hip_link"/>
+    <parent link="body_structure_link"/>
+    <child link="left_leg_upper_hip_link"/>
     <axis>
       <xyz>0 0 -1</xyz>
     </axis>
@@ -237,8 +235,8 @@
   
   
   <joint name="left_hip_roll_powered_joint" type="revolute">
-    <parent link="HR-OS1::left_leg_upper_hip_link"/>
-    <child link="HR-OS1::left_leg_lower_hip_link"/>
+    <parent link="left_leg_upper_hip_link"/>
+    <child link="left_leg_lower_hip_link"/>
     <axis>
       <xyz>0 1 0</xyz>
     </axis>
@@ -248,8 +246,8 @@
   
   
   <joint name="left_hip_pitch_powered_joint" type="revolute">
-    <parent link="HR-OS1::left_leg_lower_hip_link"/>
-    <child link="HR-OS1::left_leg_thigh_link"/>
+    <parent link="left_leg_lower_hip_link"/>
+    <child link="left_leg_thigh_link"/>
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
@@ -259,8 +257,8 @@
   
   
   <joint name="left_knee_pitch_powered_joint" type="revolute">
-    <parent link="HR-OS1::left_leg_thigh_link"/>
-    <child link="HR-OS1::left_leg_knee_link"/>
+    <parent link="left_leg_thigh_link"/>
+    <child link="left_leg_knee_link"/>
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
@@ -270,8 +268,8 @@
   
   
   <joint name="left_knee-shin_fixed_joint" type="revolute">
-    <parent link="HR-OS1::left_leg_knee_link"/>
-    <child link="HR-OS1::left_leg_shin_link"/>
+    <parent link="left_leg_knee_link"/>
+    <child link="left_leg_shin_link"/>
     <axis>
       <xyz>1 0 0</xyz>
       <limit>
@@ -285,8 +283,8 @@
   
   
   <joint name="left_ankle_pitch_powered_joint" type="revolute">
-    <parent link="HR-OS1::left_leg_shin_link"/>
-    <child link="HR-OS1::left_leg_ankle_link"/>
+    <parent link="left_leg_shin_link"/>
+    <child link="left_leg_ankle_link"/>
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
@@ -296,8 +294,8 @@
   
   
   <joint name="left_ankle_roll_powered_joint" type="revolute">
-    <parent link="HR-OS1::left_leg_ankle_link"/>
-    <child link="HR-OS1::left_leg_foot_link"/>
+    <parent link="left_leg_ankle_link"/>
+    <child link="left_leg_foot_link"/>
     <axis>
       <xyz>0 -1 0</xyz>
     </axis>
