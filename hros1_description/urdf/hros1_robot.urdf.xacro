@@ -16,10 +16,11 @@
     <xacro:body_links />
     <xacro:body_joints />
     
-    <!--
+    
     <xacro:neck_links />
     <xacro:neck_joints />
     
+    <!--
     <xacro:left_arm_links />
     <xacro:left_arm_joints />
     <xacro:left_leg_links />
