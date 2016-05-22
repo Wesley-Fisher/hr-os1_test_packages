@@ -1,6 +1,152 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-test
+
+<!--  NECK Head (Pitch Servo) -->
+<!--  ATTACHED TO BACK OF HEAD  -->
+    <link name='HR-OS1::neck_head_link'>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <gravity>1</gravity>
+      <self_collide>1</self_collide>
+      <kinematic>0</kinematic>
+
+      <visual name='neck_head_visual'>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
+        <geometry>
+          <mesh>
+            <uri>model://HR-OS1/meshes/HROS1_Simple - Neck_Head_Servo.stl</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <origin xyz=" 0.0 -0.05 0.22" rpy="0 0 0 "/>
+        <geometry>
+          <box>
+            <size>0.02 0.02 0.02</size>
+          </box>
+        </geometry>
+      </collision>
+      
+      <inertial>
+        <mass>0.127</mass>
+        <inertia
+          ixx="0.000036"
+          ixy="0.00000050"
+          ixz="-0.00000017"
+          
+          iyy="0.000027"
+          iyz="-0.00000037"
+          
+          izz="0.000038"
+          />
+      </inertial>
+    </link>
+
+
+
+<!--  NECK Base (YAW SERVO) -->
+<!--  ATTACHED TO BACK OF HEAD  -->
+    <link name='HR-OS1::neck_base_link'>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+
+      <visual name='neck_base_visual'>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
+        <geometry>
+          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Neck_Base.stl"/>
+        </geometry>
+      </visual>
+      
+      <inertial>
+        <origin xyz="0 -0.068 0.0179" rpy="0 -0 0"/>
+        <mass value="0.075"/>
+        <inertia
+          ixx="0.000029"
+          ixy="0.000000002"
+          ixz="-0.0000000069"
+          
+          iyy="0.000016"
+          iyz="0.00000045"
+          
+          izz="0.000026"
+          />
+      </inertial>
+    </link>
+
+<!--  Neck Head Platform  -->
+<!--  Supports to head; should be able to tilt  -->
+    <link name='HR-OS1::neck_base_platform_link'>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <gravity>1</gravity>
+      <self_collide>1</self_collide>
+      <kinematic>0</kinematic>
+
+      <visual name='neck_base_platform_visual'>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
+        <geometry>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Neck_Base_Platform.stl"/>
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <origin xyz="0 -0.046 0.20955" rpy="0 0 0"/>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.0025</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      
+      <inertial>
+        <origin xyz="0 -0.052 0.207" rpy="0 -0 0"/>
+        <mass value="0.012"/>
+        <inertia
+          ixx="0.0000017"
+          ixy="0.0"
+          ixz="0.0"
+          
+          iyy="0.0000019"
+          iyz="0.0"
+          
+          izz="0.0000034"
+          />
+      </inertial>
+    </link> 
+
+
+<!--  NECK Link 2  -->
+<!--  ATTACHED TO Head Servo  -->
+    <link name='HR-OS1::neck_link_2_link'>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+
+      <visual name='neck_link_2_visual'>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
+        <geometry>
+          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Neck_Link_2.stl"/>
+        </geometry>
+      </visual>
+      
+      <inertial>
+        <origin xyz="0 -0.077 0.231" rpy="0 -0 0"/>
+        <mass value="0.011"/>
+        <inertia
+          ixx="0.000002"
+          ixy="0.0"
+          ixz="0.0"
+          
+          iyy="0.0000057"
+          iyz="0.0"
+          
+          izz="0.0000071"
+          />
+      </inertial>
+    </link>
+
 <xacro:macro name="neck_links">
     <!--  ATTACHED TO TOP OF BODY -->
     <link name='HR-OS1::neck_link_1_link'>
