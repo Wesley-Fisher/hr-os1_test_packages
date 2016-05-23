@@ -267,15 +267,11 @@
   </joint>
   
   
-  <joint name="left_knee-shin_fixed_joint" type="revolute">
+  <joint name="left_knee-shin_fixed_joint" type="fixed">
     <parent link="left_leg_knee_link"/>
     <child link="left_leg_shin_link"/>
     <axis>
       <xyz>1 0 0</xyz>
-      <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-      </limit>
     </axis>
     <origin xyz="-0.015 -0.04 -0.09" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
