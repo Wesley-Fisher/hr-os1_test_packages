@@ -72,7 +72,7 @@
       <visual name='right_leg_thigh_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Thigh.stl"/>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Thigh.stl"/>
         </geometry>
       </visual>
       
@@ -102,7 +102,7 @@
       <visual name='right_leg_knee_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="model://HR-OS1/meshes/HROS1_Simple - Right_Leg_Knee.stl"/>
+          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Knee.stl"/>
         </geometry>
       </visual>
       
@@ -199,9 +199,7 @@
       <collision name="collision">
         <origin xyz=" 0.05 -0.05 -0.195" rpy="0 0 0 "/>
         <geometry>
-          <box>
-            <size>0.065 .1 0.01</size>
-          </box>
+          <box size="0.065 .1 0.01"/>
         </geometry>
       </collision>
       
