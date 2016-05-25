@@ -48,7 +48,8 @@
       <kinematic>0</kinematic>
 
       <visual name='neck_base_visual'>
-        <origin xyz="0 0.052 0" rpy="0 -0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <!--<origin xyz="0 0.052 0" rpy="0 -0 0"/>-->
         <geometry>
           <mesh filename="package://hros1_description/meshes/hros1_neck_base_moved.stl"/>
         </geometry>
@@ -79,7 +80,8 @@
       <kinematic>0</kinematic>
 
       <visual name='neck_base_platform_visual'>
-        <origin xyz="0 0.98 -.20" rpy="0 -0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <!--<origin xyz="0 0.98 -.20" rpy="0 -0 0"/>-->
         <geometry>
           <mesh filename="package://hros1_description/meshes/hros1_neck_base_platform_moved.stl"/>
         </geometry>
@@ -150,7 +152,7 @@
       <visual name='neck_link_1_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_neck_link_2_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/hros1_neck_link_1_moved.stl"/>
         </geometry>
       </visual>
       
@@ -180,7 +182,7 @@
     <axis>
       <xyz>0 0 1</xyz>
     </axis>
-    <origin xyz="0 -0.052 0" rpy="0 0 0"/>
+    <origin xyz="0 -0.052 0.162" rpy="0 0 3.1415"/>
   </joint>
 
 
@@ -191,7 +193,7 @@
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <origin xyz="0 -0.046 0.2" rpy="0 0 0"/>
+    <origin xyz="0 0 0.042" rpy="0 0 0"/>
   </joint>
   
 
@@ -202,7 +204,7 @@
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <origin xyz="0 -0.105 0.19" rpy="0 0 0"/>
+    <origin xyz="0 0.049 0.026" rpy="0 0 0"/>
   </joint>
   
   <joint name="neck_pitch_2_free_joint" type="continuous">
@@ -212,7 +214,7 @@
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <origin xyz="0 -0.105 0.23" rpy="0 0 0"/>
+    <origin xyz="0 0 0.048" rpy="0 0 0"/>
   </joint>
   
   
@@ -223,7 +225,7 @@
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
-    <origin xyz="0 -0.07 0.23" rpy="0 0 0"/>
+    <origin xyz="0 -0.034 0.0" rpy="0 0 0"/>
   </joint>
 </xacro:macro>
 </robot>
