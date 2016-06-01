@@ -9,21 +9,14 @@
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
       <static>1</static>
-
+      <!--
       <visual name='body_structure_visual'>
         <origin xyz="0 0 0"  rpy="0 -0 0"/>
         <geometry>
           <mesh filename="package://hros1_description/meshes/HROS1_Simple - Body_Structure.stl"/>
         </geometry>
-        <!--
-        <material>
-          <script>
-            <uri>file://media/materials/scripts/gazebo.material</uri>
-            <name>Gazebo/Grey</name>
-          </script>
-        </material>
-        -->
       </visual>
+      -->
       
       <collision name="collision">
         <origin xyz="0 -0.055 0.08" rpy="0 0 0"/>
