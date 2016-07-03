@@ -1,174 +1,164 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-<xacro:macro name="left_arm_links">
-<!--  LEFT ARM SHOULDER  -->
-    <link name='left_arm_shoulder_link'>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <gravity>1</gravity>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>
+    <xacro:macro name="left_arm_links">
+    <!--  LEFT ARM SHOULDER  -->
+        <link name='left_arm_shoulder_link'>
+          <origin xyz="0 0 0" rpy="0 -0 0"/>
+          <gravity>1</gravity>
+          <self_collide>0</self_collide>
+          <kinematic>0</kinematic>
 
-      <visual name='left_arm_shoulder_visual'>
-        <origin xyz="0 0 0" rpy="0 -0 0"/>
-        <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Left_Arm_Shoulder.stl"/>
-        </geometry>
-      </visual>
+          <visual name='left_arm_shoulder_visual'>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+              <mesh filename="package://hros1_description/meshes/hros1_left_arm_shoulder_moved.stl"/>
+            </geometry>
+          </visual>
+          
+          <inertial>
+            <origin xyz="0.068 -0.052 0.131" rpy="0 -0 0"/>
+            <mass value="0.011"/>
+            <inertia
+              ixx="0.0000051"
+              ixy="0.0"
+              ixz="0.00000058"
+              
+              iyy="0.0000023"
+              iyz="0.0"
+              
+              izz="0.000005"
+              />
+          </inertial>
+        </link> 
+
+
+
+    <!--  LEFT ARM UPPER SERVO  -->
+        <link name='left_arm_upper_servo_link'>
+          <origin xyz="0 0 0 0 -0 0"/>
+          <gravity>1</gravity>
+          <self_collide>0</self_collide>
+          <kinematic>0</kinematic>
+
+          <visual name='left_arm_upper_servo_visual'>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+              <mesh filename="package://hros1_description/meshes/hros1_left_arm_upper_servo_moved.stl"/>
+            </geometry>
+          </visual>
+          
+          <inertial>
+            <origin xyz="0.085 -0.051 0.106" rpy="0 -0 0"/>
+            <mass value="0.055"/>
+            <inertia
+              ixx="0.000015"
+              ixy="0.000000062"
+              ixz="0.0000017"
+              
+              iyy="0.000013"
+              iyz="-0.00000025"
+              
+              izz="0.0000089"
+              />
+          </inertial>
+        </link>
+
+    <!--  LEFT ARM Elbow  -->
+        <link name='left_arm_elbow_link'>
+          <origin xyz="0 0 0" rpy="0 -0 0"/>
+          <gravity>1</gravity>
+          <self_collide>0</self_collide>
+          <kinematic>0</kinematic>
+
+          <visual name='left_arm_elbow_visual'>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+              <mesh filename="package://hros1_description/meshes/hros1_left_arm_elbow_link_moved.stl"/>
+            </geometry>
+          </visual>
+          
+          <inertial>
+            <origin xyz="0.093 -0.050 0.072" rpy="0 -0 0"/>
+            <mass value="0.016"/>
+            <inertia
+              ixx="0.0000036"
+              ixy="0.00000016"
+              ixz="-0.00000062"
+              
+              iyy="0.0000056"
+              iyz="-0.00000064"
+              
+              izz="0.0000058"
+              />
+          </inertial>
+        </link>
+
+    <!--  LEFT ARM FOREARM SERVO  -->
+        <link name='left_arm_forearm_servo_link'>
+          <origin xyz="0 0 0" rpy="0 -0 0"/>
+          <gravity>1</gravity>
+          <self_collide>0</self_collide>
+          <kinematic>0</kinematic>
+
+          <visual name='left_arm_forearm_servo_visual'>
+            <origin xyz="0 0 0" rpy="0 -0 0"/>
+            <geometry>
+              <mesh filename="package://hros1_description/meshes/hros1_left_arm_forearm_servo_moved.stl"/>
+            </geometry>
+          </visual>
+          
+          <inertial>
+            <origin xyz="0.100 -0.028 0.047" rpy="0 -0 0"/>
+            <mass value="0.055"/>
+            <inertia
+              ixx="0.000013"
+              ixy="0.0000011"
+              ixz="0.00000051"
+              
+              iyy="0.000012"
+              iyz="-0.0000034"
+              
+              izz="0.000012"
+              />
+          </inertial>
+        </link>
+    </xacro:macro>
+
+
+    <xacro:macro name="left_arm_joints">
+      <joint name="left_shoulder_pitch_powered_joint" type="revolute">
+        <parent link="body_structure_link"/>
+        <child link="left_arm_shoulder_link"/>
+        <axis xyz="-1 0 0"/>
+        <origin xyz="0.051 0.052 0.133" rpy="0 0 0"/>
+        <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+      </joint>
       
-      <inertial>
-        <origin xyz="0.068 -0.052 0.131" rpy="0 -0 0"/>
-        <mass value="0.011"/>
-        <inertia
-          ixx="0.0000051"
-          ixy="0.0"
-          ixz="0.00000058"
-          
-          iyy="0.0000023"
-          iyz="0.0"
-          
-          izz="0.000005"
-          />
-      </inertial>
-    </link> 
-
-
-
-<!--  LEFT ARM UPPER SERVO  -->
-    <link name='left_arm_upper_servo_link'>
-      <origin xyz="0 0 0 0 -0 0"/>
-      <gravity>1</gravity>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>
-
-      <visual name='left_arm_upper_servo_visual'>
-        <origin xyz="0 0 0" rpy="0 -0 0"/>
-        <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Left_Arm_Upper_Servo.stl"/>
-        </geometry>
-      </visual>
       
-      <inertial>
-        <origin xyz="0.085 -0.051 0.106" rpy="0 -0 0"/>
-        <mass value="0.055"/>
-        <inertia
-          ixx="0.000015"
-          ixy="0.000000062"
-          ixz="0.0000017"
-          
-          iyy="0.000013"
-          iyz="-0.00000025"
-          
-          izz="0.0000089"
-          />
-      </inertial>
-    </link>
-
-
-<!--  LEFT ARM Elbow  -->
-<!--
-    <link name='left_arm_elbow_link'>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <gravity>1</gravity>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>
-
-      <visual name='left_arm_elbow_visual'>
-        <origin xyz="0 0 0" rpy="0 -0 0"/>
-        <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Left_Arm_Elbow_Link.stl"/>
-        </geometry>
-      </visual>
+      <joint name="left_shoulder_roll_powered_joint" type="revolute">
+        <parent link="left_arm_shoulder_link"/>
+        <child link="left_arm_upper_servo_link"/>
+        <axis xyz="0 -1 0"/>
+        <origin xyz="0.03 0.02 -0.015" rpy="0 0 0"/>
+        <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+      </joint>
       
-      <inertial>
-        <origin xyz="0.093 -0.050 0.072" rpy="0 -0 0"/>
-        <mass value="0.016"/>
-        <inertia
-          ixx="0.0000036"
-          ixy="0.00000016"
-          ixz="-0.00000062"
-          
-          iyy="0.0000056"
-          iyz="-0.00000064"
-          
-          izz="0.0000058"
-          />
-      </inertial>
-    </link>
-
--->
-<!--  LEFT ARM FOREARM SERVO  -->
-<!--
-    <link name='left_arm_forearm_servo_link'>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <gravity>1</gravity>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>
-
-      <visual name='left_arm_forearm_servo_visual'>
-        <origin xyz="0 0 0" rpy="0 -0 0"/>
-        <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Left_Arm_Forearm_Servo.stl"/>
-        </geometry>
-      </visual>
       
-      <inertial>
-        <origin xyz="0.100 -0.028 0.047" rpy="0 -0 0"/>
-        <mass value="0.055"/>
-        <inertia
-          ixx="0.000013"
-          ixy="0.0000011"
-          ixz="0.00000051"
-          
-          iyy="0.000012"
-          iyz="-0.0000034"
-          
-          izz="0.000012"
-          />
-      </inertial>
-    </link>
-    -->
-</xacro:macro>
-
-
-<xacro:macro name="left_arm_joints">
-  <joint name="left_shoulder_pitch_powered_joint" type="revolute">
-    <parent link="body_structure_link"/>
-    <child link="left_arm_shoulder_link"/>
-    <axis>
-      <xyz>-1 0 0</xyz>
-    </axis>
-    <origin xyz="0 -0.05 0.13" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
-  </joint>
-  
-  
-  <joint name="left_shoulder_roll_powered_joint" type="revolute">
-    <parent link="left_arm_shoulder_link"/>
-    <child link="left_arm_upper_servo_link"/>
-    <axis>
-      <xyz>0 -1 0</xyz>
-    </axis>
-    <origin xyz="-0.085 -0.05 0.115" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
-  </joint>
-  
-  
-  <joint name="left_shoulder-elbow_fixed_joint" type="fixed">
-    <parent link="left_arm_upper_servo_link"/>
-    <child link="left_arm_elbow_link"/>
-    <axis>
-    </axis>
-  </joint>
-  
-  <joint name="left_elbow_powered_joint" type="revolute">
-    <parent link="left_arm_elbow_link"/>
-    <child link="left_arm_forearm_servo_link"/>
-    <axis>
-      <xyz>1 0 -0.25</xyz>
-    </axis>
-    <origin xyz="0 -0.037 0.03" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
-  </joint>
-</xacro:macro>
+      <joint name="left_shoulder-elbow_fixed_joint" type="fixed">
+        <parent link="left_arm_upper_servo_link"/>
+        <child link="left_arm_elbow_link"/>
+        <axis xyz="0 -1 0"/>
+        <origin xyz="0.002 -0.033 -0.037" rpy="0 0 0"/>
+      </joint>
+      
+    
+      <joint name="left_elbow_powered_joint" type="revolute">
+        <parent link="left_arm_elbow_link"/>
+        <child link="left_arm_forearm_servo_link"/>
+        <axis xyz="-0.8 0.0 -0.2"/>
+        <origin xyz="-0.005 0.0 -0.03" rpy="0 0 0"/>
+        <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+      </joint>
+    </xacro:macro>
+    
 </robot>
-

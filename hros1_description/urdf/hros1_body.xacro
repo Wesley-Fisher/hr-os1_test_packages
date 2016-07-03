@@ -9,14 +9,21 @@
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
       <static>1</static>
-      <!--
+
       <visual name='body_structure_visual'>
         <origin xyz="0 0 0"  rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Body_Structure.stl"/>
+          <mesh filename="package://hros1_description/meshes/body_structure.stl"/>
         </geometry>
+        <!--
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Grey</name>
+          </script>
+        </material>
+        -->
       </visual>
-      -->
       
       <collision name="collision">
         <origin xyz="0 -0.055 0.08" rpy="0 0 0"/>
@@ -54,7 +61,7 @@
       <visual name='body_servos_visual'>
         <pose>0 0 0 0 -0 0</pose>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Body_Servos.stl"/>
+          <mesh filename="package://hros1_description/meshes/body_servos.stl"/>
         </geometry>
       </visual>
       
@@ -86,7 +93,7 @@
       <visual name='body_battery_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Body_Battery.stl"/>
+          <mesh filename="package://hros1_description/meshes/body_battery.stl"/>
         </geometry>
       </visual>
       
@@ -108,7 +115,7 @@
 </xacro:macro>
 
 <xacro:macro name="body_joints">
-<joint name="body-servos_fixture_joint" type="fixed">
+<joint name="body_servos_fixture_joint" type="fixed">
     <parent link="body_structure_link"/>
     <child link="body_servos_link"/>
     <axis>
@@ -116,7 +123,7 @@
     </axis>
   </joint>
   
-  <joint name="body-battery_fixture_joint" type="fixed">
+  <joint name="body_battery_fixture_joint" type="fixed">
     <parent link="body_structure_link"/>
     <child link="body_battery_link"/>
     <axis>
