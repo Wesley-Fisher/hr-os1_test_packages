@@ -30,7 +30,7 @@
     <xacro:right_leg_joints />
     
     <link name="world"/>
-    <joint name="fixed_joint" type="fixed">
+    <joint name="fixed_joint" type="free">
         <parent link="world"/>
         <child link="body_structure_link"/>
         <axis>

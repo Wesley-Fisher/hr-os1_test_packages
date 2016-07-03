@@ -8,7 +8,7 @@
       <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
-      <static>1</static>
+      <static>0</static>
 
       <visual name='body_structure_visual'>
         <origin xyz="0 0 0"  rpy="0 -0 0"/>
