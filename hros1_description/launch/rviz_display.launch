@@ -1,6 +1,6 @@
 <launch>
 <arg name="gui" default="False" />
-<param name="robot_description" textfile="$(find hros1_description)/urdf/hros1_robot.urdf" />
+<param name="robot_description" command="$(find xacro)/xacro.py $(find hros1_description)/urdf/hros1_robot.urdf.xacro" />
 <param name="use_gui" value="$(arg gui)"/>
 <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
     <param name="use_gui" value="true"/>

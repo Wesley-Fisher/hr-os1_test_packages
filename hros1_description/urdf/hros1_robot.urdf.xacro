@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <robot name="hros1" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+    <xacro:include filename="$(find hros1_description)/urdf/hros1_common.xacro"/>
     <xacro:include filename="$(find hros1_description)/urdf/hros1_dimensions.xacro"/>
 
     <xacro:include filename="$(find hros1_description)/urdf/hros1_body.xacro"/>
@@ -12,6 +13,9 @@
     <xacro:include filename="$(find hros1_description)/urdf/hros1_right_arm.xacro"/>
     <xacro:include filename="$(find hros1_description)/urdf/hros1_right_leg.xacro"/>
   
+  
+    <xacro:include filename="$(find hros1_description)/urdf/hros1_transmission.xacro"/>
+   
     
     <xacro:body_links />
     <xacro:body_joints />
@@ -29,8 +33,10 @@
     <xacro:right_leg_links />
     <xacro:right_leg_joints />
     
+    <xacro:hros1_transmissions/>
+    
     <link name="world"/>
-    <joint name="fixed_joint" type="free">
+    <joint name="fixed_joint" type="floating">
         <parent link="world"/>
         <child link="body_structure_link"/>
         <axis>

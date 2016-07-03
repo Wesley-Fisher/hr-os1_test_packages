@@ -130,7 +130,7 @@
     <child link="right_arm_shoulder_link"/>
     <axis xyz="-1 0 0"/>
     <origin xyz="-0.051 0.052 0.133" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
   
   
@@ -139,7 +139,7 @@
     <child link="right_arm_upper_servo_link"/>
     <axis xyz="0 -1 0"/>
     <origin xyz="-0.03 0.02 -0.015" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
   
   
@@ -155,7 +155,7 @@
     <child link="right_arm_forearm_servo_link"/>
     <axis xyz="-0.8 0.0 0.2"/>
     <origin xyz="0.005 0.0 -0.03" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
 </xacro:macro>
 </robot>

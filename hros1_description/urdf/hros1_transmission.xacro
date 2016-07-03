@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+
+
+<xacro:macro name="simple_transmission" params="joint">
+    <transmission name="${joint}_transmission">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="${joint}">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name ="${joint}_actuator">
+            <mechanicalReduction>1</mechanicalReduction>
+            <hardwareInterface>EffortJointTnterface</hardwareInterface>
+        </actuator>
+    </transmission>
+</xacro:macro>
+
+<xacro:macro name="hros1_transmissions">
+
+    <gazebo>
+      <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+        <robotNamespace>/hros1</robotNamespace>
+      </plugin>
+    </gazebo>
+
+    <xacro:simple_transmission joint="neck_yaw_powered_joint"/>
+    <xacro:simple_transmission joint="neck_pitch_main_powered_joint"/>
+
+    <xacro:simple_transmission joint="left_shoulder_pitch_powered_joint"/>
+    <xacro:simple_transmission joint="left_shoulder_roll_powered_joint"/>
+    <xacro:simple_transmission joint="left_elbow_powered_joint"/>
+
+    <xacro:simple_transmission joint="right_shoulder_pitch_powered_joint"/>
+    <xacro:simple_transmission joint="right_shoulder_roll_powered_joint"/>
+    <xacro:simple_transmission joint="right_elbow_powered_joint"/>
+
+    <xacro:simple_transmission joint="left_hip_yaw_powered_joint"/>
+    <xacro:simple_transmission joint="left_hip_roll_powered_joint"/>
+    <xacro:simple_transmission joint="left_hip_pitch_powered_joint"/>
+    <xacro:simple_transmission joint="left_knee_pitch_powered_joint"/>
+    <xacro:simple_transmission joint="left_ankle_pitch_powered_joint"/>
+    <xacro:simple_transmission joint="left_ankle_roll_powered_joint"/>
+
+    <xacro:simple_transmission joint="right_hip_yaw_powered_joint"/>
+    <xacro:simple_transmission joint="right_hip_roll_powered_joint"/>
+    <xacro:simple_transmission joint="right_hip_pitch_powered_joint"/>
+    <xacro:simple_transmission joint="right_knee_pitch_powered_joint"/>
+    <xacro:simple_transmission joint="right_ankle_pitch_powered_joint"/>
+    <xacro:simple_transmission joint="right_ankle_roll_powered_joint"/>
+</xacro:macro>
+</robot>

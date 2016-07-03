@@ -231,7 +231,7 @@
     <child link="left_leg_upper_hip_link"/>
     <axis xyz="0 0 1"/>
     <origin xyz="0.039 0.045 0.023" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
   
   
@@ -240,7 +240,7 @@
     <child link="left_leg_lower_hip_link"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0 0.053 -0.036" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
   
   
@@ -249,7 +249,7 @@
     <child link="left_leg_thigh_link"/>
     <axis xyz="1 0 0"/>
     <origin xyz="-0.015 -0.053 0" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
   
   
@@ -258,7 +258,7 @@
     <child link="left_leg_knee_link"/>
     <axis xyz="1 0 0"/>
     <origin xyz="-0.006 -0.006 -0.077" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
   
   <joint name="left_knee-shin_fixed_joint" type="fixed">
@@ -266,7 +266,7 @@
     <child link="left_leg_shin_link"/>
     <axis xyz="0 0 1"/>
     <origin xyz="0.004 -0.002 -0.015" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
   
   
@@ -275,7 +275,7 @@
     <child link="left_leg_ankle_link"/>
     <axis xyz="1 0 0"/>
     <origin xyz="-0.004 0.008 -0.058" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
   
   <joint name="left_ankle_roll_powered_joint" type="revolute">
@@ -283,7 +283,7 @@
     <child link="left_leg_foot_link"/>
     <axis xyz="0 1 0"/>
     <origin xyz="0.021 0.053 0" rpy="0 0 0"/>
-    <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
+    <xacro:ax12_limits />
   </joint>
 </xacro:macro>
 </robot>
