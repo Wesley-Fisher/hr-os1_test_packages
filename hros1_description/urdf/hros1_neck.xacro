@@ -1,7 +1,40 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-<!--  NECK Head (Pitch Servo) -->
+
+
+<xacro:macro name="neck_links">
+    <!--  ATTACHED TO TOP OF BODY -->
+    <link name='neck_link_1_link'>
+      <origin xyz="0 0 0" rpy="0 -0 0"/>
+      <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+
+      <visual name='neck_link_1_visual'>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
+        <geometry>
+          <mesh filename="package://hros1_description/meshes/hros1_neck_link_1_moved.stl"/>
+        </geometry>
+      </visual>
+      
+      <inertial>
+        <origin xyz="0 -0.101 0.208" rpy="0 -0 0"/>
+        <mass value="0.005"/>
+        <inertia
+          ixx="0.0000012"
+          ixy="0.0"
+          ixz="0.0"
+          
+          iyy="0.0000032"
+          iyz="0.0"
+          
+          izz="0.000002"
+          />
+      </inertial>
+    </link>
+    
+    <!--  NECK Head (Pitch Servo) -->
 <!--  ATTACHED TO BACK OF HEAD  -->
     <link name='neck_head_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
@@ -37,8 +70,6 @@
       </inertial>
     </link>
 
-
-
 <!--  NECK Base (YAW SERVO) -->
 <!--  ATTACHED TO BACK OF HEAD  -->
     <link name='neck_base_link'>
@@ -48,7 +79,7 @@
       <kinematic>0</kinematic>
 
       <visual name='neck_base_visual'>
-        <origin xyz="0 0.052 0" rpy="0 -0 0"/>
+        <origin xyz="0 0 0" rpy="0 -0 3.1415"/>
         <geometry>
           <mesh filename="package://hros1_description/meshes/hros1_neck_base_moved.stl"/>
         </geometry>
@@ -69,7 +100,6 @@
           />
       </inertial>
     </link>
-
 <!--  Neck Head Platform  -->
 <!--  Supports to head; should be able to tilt  -->
     <link name='neck_base_platform_link'>
@@ -79,7 +109,7 @@
       <kinematic>0</kinematic>
 
       <visual name='neck_base_platform_visual'>
-        <origin xyz="0 0.98 -.20" rpy="0 -0 0"/>
+        <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
           <mesh filename="package://hros1_description/meshes/hros1_neck_base_platform_moved.stl"/>
         </geometry>
@@ -107,9 +137,9 @@
       </inertial>
     </link> 
 
-
 <!--  NECK Link 2  -->
 <!--  ATTACHED TO Head Servo  -->
+
     <link name='neck_link_2_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
@@ -124,7 +154,7 @@
       </visual>
       
       <inertial>
-        <origin xyz="0 -0.077 0.231" rpy="0 -0 0"/>
+        <origin xyz="0 0 0.046" rpy="0 -0 0"/>
         <mass value="0.011"/>
         <inertia
           ixx="0.000002"
@@ -138,37 +168,8 @@
           />
       </inertial>
     </link>
-
-<xacro:macro name="neck_links">
-    <!--  ATTACHED TO TOP OF BODY -->
-    <link name='neck_link_1_link'>
-      <origin xyz="0 0 0" rpy="0 -0 0"/>
-      <gravity>1</gravity>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>
-
-      <visual name='neck_link_1_visual'>
-        <origin xyz="0 0 0" rpy="0 -0 0"/>
-        <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_neck_link_2_moved.stl"/>
-        </geometry>
-      </visual>
-      
-      <inertial>
-        <origin xyz="0 -0.101 0.208" rpy="0 -0 0"/>
-        <mass value="0.005"/>
-        <inertia
-          ixx="0.0000012"
-          ixy="0.0"
-          ixz="0.0"
-          
-          iyy="0.0000032"
-          iyz="0.0"
-          
-          izz="0.000002"
-          />
-      </inertial>
-    </link>
+    
+    
 </xacro:macro>
 
 
@@ -177,12 +178,9 @@
     <parent link="body_structure_link"/>
     <child link="neck_base_link"/>
     <limit effort="1" velocity="1" lower="-3.1415" upper="3.1415"/>
-    <axis>
-      <xyz>0 0 1</xyz>
-    </axis>
-    <origin xyz="0 -0.052 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="0 -0.052 0.162" rpy="0 0 0"/>
   </joint>
-
 
   <joint name="neck_base_platform_free_joint" type="continuous">
     <parent link="neck_base_link"/>
@@ -191,10 +189,10 @@
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <origin xyz="0 -0.046 0.2" rpy="0 0 0"/>
+    <origin xyz="0.015 0 0.042" rpy="0 0 0"/>
   </joint>
   
-
+  
   <joint name="neck_pitch_1_free_joint" type="continuous">
     <parent link="neck_base_link"/>
     <child link="neck_link_1_link"/>
@@ -202,7 +200,7 @@
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <origin xyz="0 -0.105 0.19" rpy="0 0 0"/>
+    <origin xyz="0 -0.049 0.028" rpy="0 0 0"/>
   </joint>
   
   <joint name="neck_pitch_2_free_joint" type="continuous">
@@ -212,7 +210,7 @@
     <axis>
       <xyz>1 0 0</xyz>
     </axis>
-    <origin xyz="0 -0.105 0.23" rpy="0 0 0"/>
+    <origin xyz="0 0 0.048" rpy="0 0 3.1415"/>
   </joint>
   
   
@@ -223,7 +221,9 @@
     <axis>
       <xyz>-1 0 0</xyz>
     </axis>
-    <origin xyz="0 -0.07 0.23" rpy="0 0 0"/>
+    <origin xyz="0 -0.034 0.0" rpy="0 0 0"/>
   </joint>
+  
+  
 </xacro:macro>
 </robot>

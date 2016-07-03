@@ -65,6 +65,7 @@
 
 
 <!--  LEFT ARM Elbow  -->
+<!--
     <link name='left_arm_elbow_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
@@ -94,8 +95,9 @@
       </inertial>
     </link>
 
-
+-->
 <!--  LEFT ARM FOREARM SERVO  -->
+<!--
     <link name='left_arm_forearm_servo_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
@@ -124,7 +126,9 @@
           />
       </inertial>
     </link>
+    -->
 </xacro:macro>
+
 
 <xacro:macro name="left_arm_joints">
   <joint name="left_shoulder_pitch_powered_joint" type="revolute">
@@ -167,3 +171,4 @@
   </joint>
 </xacro:macro>
 </robot>
+
