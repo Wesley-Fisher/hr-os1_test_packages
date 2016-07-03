@@ -32,6 +32,7 @@
     </link>  
 
 <!-- LEFT LOWER HIP  -->
+<!--
     <link name='left_leg_lower_hip_link'>
       <origin xyz="0 0 0 0 -0 0"/>
       <gravity>1</gravity>
@@ -60,9 +61,10 @@
           />
       </inertial>
     </link> 
-
+-->
 
 <!-- LEFT THIGH  -->
+<!--
     <link name='left_leg_thigh_link'>
       <origin xyz="0 0 0 0 -0 0"/>
       <gravity>1</gravity>
@@ -91,8 +93,9 @@
           />
       </inertial>
     </link>
-
+-->
 <!-- LEFT KNEE  -->
+<!--
     <link name='left_leg_knee_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
@@ -121,10 +124,11 @@
           />
       </inertial>
     </link>
-
+-->
 
 
 <!-- LEFT SHIN  -->
+<!--
     <link name='left_leg_shin_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
@@ -153,8 +157,10 @@
           />
       </inertial>
     </link>
+-->
 
 <!-- LEFT ANKLE  -->
+<!--
     <link name='left_leg_ankle_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
@@ -183,8 +189,10 @@
           />
       </inertial>
     </link>
+-->
 
 <!-- LEFT FOOT  -->
+<!--
     <link name='left_leg_foot_link'>
       <origin xyz="0 0 0" rpy="0 -0 0"/>
       <gravity>1</gravity>
@@ -220,26 +228,23 @@
           />
       </inertial>
     </link>
+ -->
 </xacro:macro>
 
 <xacro:macro name="left_leg_joints">
   <joint name="left_hip_yaw_powered_joint" type="revolute">
     <parent link="body_structure_link"/>
     <child link="left_leg_upper_hip_link"/>
-    <axis>
-      <xyz>0 0 -1</xyz>
-    </axis>
+    <axis xyz="0 0 1"/>
     <origin xyz="-0.040 -0.045 0" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
-  
+  <!--
   <joint name="left_hip_roll_powered_joint" type="revolute">
     <parent link="left_leg_upper_hip_link"/>
     <child link="left_leg_lower_hip_link"/>
-    <axis>
-      <xyz>0 1 0</xyz>
-    </axis>
+    <axis xyz="0 0 1"/>
     <origin xyz="-0.040 -0.045 -0.01" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
@@ -248,9 +253,7 @@
   <joint name="left_hip_pitch_powered_joint" type="revolute">
     <parent link="left_leg_lower_hip_link"/>
     <child link="left_leg_thigh_link"/>
-    <axis>
-      <xyz>1 0 0</xyz>
-    </axis>
+    <axis xyz="0 0 1"/>
     <origin xyz="-0.040 -0.045 -0.01" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
@@ -259,9 +262,7 @@
   <joint name="left_knee_pitch_powered_joint" type="revolute">
     <parent link="left_leg_thigh_link"/>
     <child link="left_leg_knee_link"/>
-    <axis>
-      <xyz>-1 0 0</xyz>
-    </axis>
+    <axis xyz="0 0 1"/>
     <origin xyz="-0.015 -0.04 -0.09" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
@@ -270,9 +271,7 @@
   <joint name="left_knee-shin_fixed_joint" type="fixed">
     <parent link="left_leg_knee_link"/>
     <child link="left_leg_shin_link"/>
-    <axis>
-      <xyz>1 0 0</xyz>
-    </axis>
+    <axis xyz="0 0 1"/>
     <origin xyz="-0.015 -0.04 -0.09" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
@@ -281,9 +280,7 @@
   <joint name="left_ankle_pitch_powered_joint" type="revolute">
     <parent link="left_leg_shin_link"/>
     <child link="left_leg_ankle_link"/>
-    <axis>
-      <xyz>-1 0 0</xyz>
-    </axis>
+    <axis xyz="0 0 1"/>
     <origin xyz="-0.015 -0.045 -0.16" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
@@ -292,11 +289,10 @@
   <joint name="left_ankle_roll_powered_joint" type="revolute">
     <parent link="left_leg_ankle_link"/>
     <child link="left_leg_foot_link"/>
-    <axis>
-      <xyz>0 -1 0</xyz>
-    </axis>
+    <axis xyz="0 0 1"/>
     <origin xyz="-0.04 -0.045 -0.16" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
+  -->
 </xacro:macro>
 </robot>
