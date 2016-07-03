@@ -4,10 +4,6 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <robot name="hros1" xmlns:xacro="http://ros.org/wiki/xacro">
-  <!--
-    <xacro:include filename="$(find hros1_description)/urdf/hros1_right_arm.xacro"/>
-    <xacro:include filename="$(find hros1_description)/urdf/hros1_right_leg.xacro"/>
-  -->
   <!--  MAIN BODY  -->
   <!--  MAIN LINK  -->
   <link name="body_structure_link">
@@ -102,7 +98,7 @@
     <visual name="neck_link_1_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_neck_link_1_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/neck_link_1.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -121,7 +117,7 @@
     <visual name="neck_head_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_neck_head_servo_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/neck_head_servo.stl"/>
       </geometry>
     </visual>
     <collision name="collision">
@@ -145,7 +141,7 @@
     <visual name="neck_base_visual">
       <origin rpy="0 -0 0" xyz="0 0.0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_neck_base_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/neck_base.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -164,7 +160,7 @@
     <visual name="neck_base_platform_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_neck_base_platform_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/neck_base_platform.stl"/>
       </geometry>
     </visual>
     <collision name="collision">
@@ -189,7 +185,7 @@
     <visual name="neck_link_2_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_neck_link_2_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/neck_link_2.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -242,7 +238,7 @@
     <visual name="left_arm_shoulder_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_arm_shoulder_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_arm_shoulder.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -260,7 +256,7 @@
     <visual name="left_arm_upper_servo_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_arm_upper_servo_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_arm_upper_servo.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -278,7 +274,7 @@
     <visual name="left_arm_elbow_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_arm_elbow_link_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_arm_elbow_link.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -296,7 +292,7 @@
     <visual name="left_arm_forearm_servo_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_arm_forearm_servo_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_arm_forearm_servo.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -341,7 +337,7 @@
     <visual name="left_leg_upper_hip_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_leg_yaw_link_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_leg_yaw_link.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -359,7 +355,7 @@
     <visual name="left_leg_lower_hip_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_leg_hip_joint_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_leg_hip_joint.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -377,7 +373,7 @@
     <visual name="left_leg_thigh_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_leg_thigh_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_leg_thigh.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -395,7 +391,7 @@
     <visual name="left_leg_knee_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_leg_knee_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_leg_knee.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -413,7 +409,7 @@
     <visual name="left_leg_shin_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_leg_shin_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_leg_shin.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -431,7 +427,7 @@
     <visual name="left_leg_ankle_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_leg_ankle_joint_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_leg_ankle_joint.stl"/>
       </geometry>
     </visual>
     <inertial>
@@ -449,7 +445,7 @@
     <visual name="left_leg_foot_visual">
       <origin rpy="0 -0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://hros1_description/meshes/hros1_left_leg_foot_moved.stl"/>
+        <mesh filename="package://hros1_description/meshes/left_leg_foot.stl"/>
       </geometry>
     </visual>
     <collision name="collision">
@@ -516,12 +512,285 @@
     <origin rpy="0 0 0" xyz="0.021 0.053 0"/>
     <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
   </joint>
-  <!--
-    <xacro:right_arm_links />
-    <xacro:right_arm_joints />
-    <xacro:right_leg_links />
-    <xacro:right_leg_joints />
-    -->
+  <link name="right_arm_shoulder_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_arm_shoulder_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_arm_shoulder.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.068 -0.052 0.131"/>
+      <mass value="0.011"/>
+      <inertia ixx="0.0000051" ixy="0.0" ixz="-0.00000058" iyy="0.0000023" iyz="0.0" izz="0.000005"/>
+    </inertial>
+  </link>
+  <!--  RIGHT UPPER SERVO  -->
+  <link name="right_arm_upper_servo_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_arm_upper_servo_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_arm_upper_servo.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.085 -0.051 0.106"/>
+      <mass value="0.055"/>
+      <inertia ixx="0.000015" ixy="-0.000000066" ixz="-0.0000017" iyy="0.000013" iyz="-0.00000025" izz="0.0000089"/>
+    </inertial>
+  </link>
+  <!--  RIGHT ELBOW  -->
+  <link name="right_arm_elbow_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_arm_elbow_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_arm_elbow_link.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.093 -0.050 0.072"/>
+      <mass value="0.016"/>
+      <inertia ixx="0.0000036" ixy="-0.00000016" ixz="0.00000062" iyy="0.0000056" iyz="-0.00000064" izz="0.0000058"/>
+    </inertial>
+  </link>
+  <!--  RIGHT HAND SERVO  -->
+  <link name="right_arm_forearm_servo_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_arm_forearm_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_arm_forearm_servo.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.100 -0.028 0.047"/>
+      <mass value="0.055"/>
+      <inertia ixx="0.000013" ixy="-0.0000011" ixz="-0.00000052" iyy="0.000012" iyz="-0.0000034" izz="0.000012"/>
+    </inertial>
+  </link>
+  <joint name="right_shoulder_pitch_powered_joint" type="revolute">
+    <parent link="body_structure_link"/>
+    <child link="right_arm_shoulder_link"/>
+    <axis xyz="-1 0 0"/>
+    <origin rpy="0 0 0" xyz="-0.051 0.052 0.133"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <joint name="right_shoulder_roll_powered_joint" type="revolute">
+    <parent link="right_arm_shoulder_link"/>
+    <child link="right_arm_upper_servo_link"/>
+    <axis xyz="0 -1 0"/>
+    <origin rpy="0 0 0" xyz="-0.03 0.02 -0.015"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <joint name="right_shoulder-elbow_fixed_joint" type="fixed">
+    <parent link="right_arm_upper_servo_link"/>
+    <child link="right_arm_elbow_link"/>
+    <axis xyz="0 -1 0"/>
+    <origin rpy="0 0 0" xyz="-0.002 -0.033 -0.037"/>
+  </joint>
+  <joint name="right_elbow_powered_joint" type="revolute">
+    <parent link="right_arm_elbow_link"/>
+    <child link="right_arm_forearm_servo_link"/>
+    <axis xyz="-0.8 0.0 -0.2"/>
+    <origin rpy="0 0 0" xyz="0.005 0.0 -0.03"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <!-- RIGHT Upper HIP  -->
+  <link name="right_leg_upper_hip_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_leg_upper_hip_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_leg_yaw_link.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.039 -0.062 0.011"/>
+      <mass value="0.017"/>
+      <inertia ixx="0.000016" ixy="0.0" ixz="0.0" iyy="0.0000035" iyz="0.0" izz="0.000015"/>
+    </inertial>
+  </link>
+  <!-- RIGHT HIP  -->
+  <link name="right_leg_lower_hip_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_leg_lower_hip_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_leg_hip_joint.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.039 -0.062 -0.024"/>
+      <mass value="0.110"/>
+      <inertia ixx="0.000058" ixy="0.00000045" ixz="0.00000027" iyy="0.000029" iyz="0.00000024" izz="0.000046"/>
+    </inertial>
+  </link>
+  <!-- RIGHT THIGH  -->
+  <link name="right_leg_thigh_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_leg_thigh_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_leg_thigh.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.039 -0.034 -0.053"/>
+      <mass value="0.028"/>
+      <inertia ixx="0.000016" ixy="0.0" ixz="0.0" iyy="0.000023" iyz="-0.000002" izz="0.000013"/>
+    </inertial>
+  </link>
+  <!-- RIGHT KNEE  -->
+  <link name="right_leg_knee_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_leg_knee_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_leg_knee.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.038 -0.027 -0.091"/>
+      <mass value="0.055"/>
+      <inertia ixx="0.000013" ixy="0.00000025" ixz="0.000000071" iyy="0.0000090" iyz="-0.0000019" izz="0.000015"/>
+    </inertial>
+  </link>
+  <!-- RIGHT SHIN  -->
+  <link name="right_leg_shin_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_leg_shin_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_leg_shin.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.039 -0.035 -0.125"/>
+      <mass value="0.021"/>
+      <inertia ixx="0.0000094" ixy="0.0" ixz="0.0" iyy="0.000014" iyz="0.0000018" izz="0.0000088"/>
+    </inertial>
+  </link>
+  <!-- RIGHT ANKLE  -->
+  <link name="right_leg_ankle_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_leg_ankle_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_leg_ankle_joint.stl"/>
+      </geometry>
+    </visual>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.039 -0.062 -0.147"/>
+      <mass value="0.110"/>
+      <inertia ixx="0.000058" ixy="0.00000051" ixz="-0.00000024" iyy="0.000029" iyz="-0.00000027" izz="0.000046"/>
+    </inertial>
+  </link>
+  <!-- RIGHT FOOT  -->
+  <link name="right_leg_foot_link">
+    <origin rpy="0 -0 0" xyz="0 0 0"/>
+    <gravity>1</gravity>
+    <self_collide>0</self_collide>
+    <kinematic>0</kinematic>
+    <visual name="right_leg_foot_visual">
+      <origin rpy="0 -0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="package://hros1_description/meshes/right_leg_foot.stl"/>
+      </geometry>
+    </visual>
+    <collision name="collision">
+      <origin rpy="0 0 0 " xyz=" 0.05 -0.05 -0.195"/>
+      <geometry>
+        <box size="0.065 .1 0.01"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin rpy="0 -0 0" xyz="-0.046 -0.052 -0.188"/>
+      <mass value="0.067"/>
+      <inertia ixx="0.00006" ixy="-0.0000017" ixz="-0.0000011" iyy="0.000026" iyz="-0.0000014" izz="0.00008"/>
+    </inertial>
+  </link>
+  <joint name="right_hip_yaw_powered_joint" type="revolute">
+    <parent link="body_structure_link"/>
+    <child link="right_leg_upper_hip_link"/>
+    <axis xyz="0 0 1"/>
+    <origin rpy="0 0 0" xyz="-0.039 0.045 0.023"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <joint name="right_hip_roll_powered_joint" type="revolute">
+    <parent link="right_leg_upper_hip_link"/>
+    <child link="right_leg_lower_hip_link"/>
+    <axis xyz="0 1 0"/>
+    <origin rpy="0 0 0" xyz="-0 0.053 -0.036"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <joint name="right_hip_pitch_powered_joint" type="revolute">
+    <parent link="right_leg_lower_hip_link"/>
+    <child link="right_leg_thigh_link"/>
+    <axis xyz="1 0 0"/>
+    <origin rpy="0 0 0" xyz="0.015 -0.053 0"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <joint name="right_knee_pitch_powered_joint" type="revolute">
+    <parent link="right_leg_thigh_link"/>
+    <child link="right_leg_knee_link"/>
+    <axis xyz="1 0 0"/>
+    <origin rpy="0 0 0" xyz="0.006 -0.006 -0.077"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <joint name="right_knee-shin_fixed_joint" type="fixed">
+    <parent link="right_leg_knee_link"/>
+    <child link="right_leg_shin_link"/>
+    <axis xyz="1 0 0"/>
+    <origin rpy="0 0 0" xyz="-0.004 -0.002 -0.015"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <joint name="right_ankle_pitch_powered_joint" type="revolute">
+    <parent link="right_leg_shin_link"/>
+    <child link="right_leg_ankle_link"/>
+    <axis xyz="1 0 0"/>
+    <origin rpy="0 0 0" xyz="0.004 0.008 -0.058"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
+  <joint name="right_ankle_roll_powered_joint" type="revolute">
+    <parent link="right_leg_ankle_link"/>
+    <child link="right_leg_foot_link"/>
+    <axis xyz="0 1 0"/>
+    <origin rpy="0 0 0" xyz="-0.021 0.053 0"/>
+    <limit effort="1" lower="-3.1415" upper="3.1415" velocity="1"/>
+  </joint>
   <link name="world"/>
   <joint name="fixed_joint" type="fixed">
     <parent link="world"/>

@@ -11,7 +11,7 @@
       <visual name='right_leg_upper_hip_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Yaw_Link.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_leg_yaw_link.stl"/>
         </geometry>
       </visual>
       
@@ -41,7 +41,7 @@
       <visual name='right_leg_lower_hip_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Hip_Joint.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_leg_hip_joint.stl"/>
         </geometry>
       </visual>
       
@@ -72,7 +72,7 @@
       <visual name='right_leg_thigh_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Thigh.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_leg_thigh.stl"/>
         </geometry>
       </visual>
       
@@ -102,7 +102,7 @@
       <visual name='right_leg_knee_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Knee.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_leg_knee.stl"/>
         </geometry>
       </visual>
       
@@ -134,7 +134,7 @@
       <visual name='right_leg_shin_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Shin.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_leg_shin.stl"/>
         </geometry>
       </visual>
       
@@ -164,7 +164,7 @@
       <visual name='right_leg_ankle_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Ankle_Joint.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_leg_ankle_joint.stl"/>
         </geometry>
       </visual> 
       <inertial>
@@ -193,7 +193,7 @@
       <visual name='right_leg_foot_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Leg_Foot.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_leg_foot.stl"/>
         </geometry>
       </visual>
       <collision name="collision">
@@ -224,10 +224,8 @@
 <joint name="right_hip_yaw_powered_joint" type="revolute">
     <parent link="body_structure_link"/>
     <child link="right_leg_upper_hip_link"/>
-    <axis>
-      <xyz>0 0 -1</xyz>
-    </axis>
-    <origin xyz="0.040 -0.045 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <origin xyz="-0.039 0.045 0.023" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
@@ -235,10 +233,8 @@
   <joint name="right_hip_roll_powered_joint" type="revolute">
     <parent link="right_leg_upper_hip_link"/>
     <child link="right_leg_lower_hip_link"/>
-    <axis>
-      <xyz>0 1 0</xyz>
-    </axis>
-    <origin xyz="0.040 -0.045 -0.01" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="-0 0.053 -0.036" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
@@ -246,10 +242,8 @@
   <joint name="right_hip_pitch_powered_joint" type="revolute">
     <parent link="right_leg_lower_hip_link"/>
     <child link="right_leg_thigh_link"/>
-    <axis>
-      <xyz>-1 0 0</xyz>
-    </axis>
-    <origin xyz="0.040 -0.045 -0.01" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0.015 -0.053 0" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
@@ -257,10 +251,8 @@
   <joint name="right_knee_pitch_powered_joint" type="revolute">
     <parent link="right_leg_thigh_link"/>
     <child link="right_leg_knee_link"/>
-    <axis>
-      <xyz>1 0 0</xyz>
-    </axis>
-    <origin xyz="0.015 -0.04 -0.09" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0.006 -0.006 -0.077" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
@@ -268,10 +260,8 @@
   <joint name="right_knee-shin_fixed_joint" type="fixed">
     <parent link="right_leg_knee_link"/>
     <child link="right_leg_shin_link"/>
-    <axis>
-      <xyz>1 0 0</xyz>
-    </axis>
-    <origin xyz="0.015 -0.04 -0.09" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="-0.004 -0.002 -0.015" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
@@ -279,10 +269,8 @@
   <joint name="right_ankle_pitch_powered_joint" type="revolute">
     <parent link="right_leg_shin_link"/>
     <child link="right_leg_ankle_link"/>
-    <axis>
-      <xyz>1 0 0</xyz>
-    </axis>
-    <origin xyz="0.015 -0.045 -0.16" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <origin xyz="0.004 0.008 -0.058" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
@@ -290,10 +278,8 @@
   <joint name="right_ankle_roll_powered_joint" type="revolute">
     <parent link="right_leg_ankle_link"/>
     <child link="right_leg_foot_link"/>
-    <axis>
-      <xyz>0 -1 0</xyz>
-    </axis>
-    <origin xyz="0.04 -0.045 -0.16" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <origin xyz="-0.021 0.053 0" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
 </xacro:macro>

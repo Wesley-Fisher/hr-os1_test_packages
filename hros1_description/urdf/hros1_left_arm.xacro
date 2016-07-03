@@ -11,7 +11,7 @@
           <visual name='left_arm_shoulder_visual'>
             <origin xyz="0 0 0" rpy="0 -0 0"/>
             <geometry>
-              <mesh filename="package://hros1_description/meshes/hros1_left_arm_shoulder_moved.stl"/>
+              <mesh filename="package://hros1_description/meshes/left_arm_shoulder.stl"/>
             </geometry>
           </visual>
           
@@ -43,7 +43,7 @@
           <visual name='left_arm_upper_servo_visual'>
             <origin xyz="0 0 0" rpy="0 -0 0"/>
             <geometry>
-              <mesh filename="package://hros1_description/meshes/hros1_left_arm_upper_servo_moved.stl"/>
+              <mesh filename="package://hros1_description/meshes/left_arm_upper_servo.stl"/>
             </geometry>
           </visual>
           
@@ -73,7 +73,7 @@
           <visual name='left_arm_elbow_visual'>
             <origin xyz="0 0 0" rpy="0 -0 0"/>
             <geometry>
-              <mesh filename="package://hros1_description/meshes/hros1_left_arm_elbow_link_moved.stl"/>
+              <mesh filename="package://hros1_description/meshes/left_arm_elbow_link.stl"/>
             </geometry>
           </visual>
           
@@ -103,7 +103,7 @@
           <visual name='left_arm_forearm_servo_visual'>
             <origin xyz="0 0 0" rpy="0 -0 0"/>
             <geometry>
-              <mesh filename="package://hros1_description/meshes/hros1_left_arm_forearm_servo_moved.stl"/>
+              <mesh filename="package://hros1_description/meshes/left_arm_forearm_servo.stl"/>
             </geometry>
           </visual>
           

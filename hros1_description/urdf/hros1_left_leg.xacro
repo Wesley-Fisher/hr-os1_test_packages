@@ -11,7 +11,7 @@
       <visual name='left_leg_upper_hip_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_left_leg_yaw_link_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/left_leg_yaw_link.stl"/>
         </geometry>
       </visual>
       
@@ -41,7 +41,7 @@
       <visual name='left_leg_lower_hip_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_left_leg_hip_joint_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/left_leg_hip_joint.stl"/>
         </geometry>
       </visual>
       
@@ -72,7 +72,7 @@
       <visual name='left_leg_thigh_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_left_leg_thigh_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/left_leg_thigh.stl"/>
         </geometry>
       </visual>
       
@@ -102,7 +102,7 @@
       <visual name='left_leg_knee_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_left_leg_knee_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/left_leg_knee.stl"/>
         </geometry>
       </visual>
       
@@ -134,7 +134,7 @@
       <visual name='left_leg_shin_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_left_leg_shin_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/left_leg_shin.stl"/>
         </geometry>
       </visual>
       
@@ -165,7 +165,7 @@
       <visual name='left_leg_ankle_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_left_leg_ankle_joint_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/left_leg_ankle_joint.stl"/>
         </geometry>
       </visual>
       
@@ -196,7 +196,7 @@
       <visual name='left_leg_foot_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_left_leg_foot_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/left_leg_foot.stl"/>
         </geometry>
       </visual>
       

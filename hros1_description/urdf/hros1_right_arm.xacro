@@ -10,7 +10,7 @@
       <visual name='right_arm_shoulder_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Arm_Shoulder.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_arm_shoulder.stl"/>
         </geometry>
       </visual>
       
@@ -41,7 +41,7 @@
       <visual name='right_arm_upper_servo_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Arm_Upper_Servo.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_arm_upper_servo.stl"/>
         </geometry>
       </visual>
       
@@ -72,7 +72,7 @@
       <visual name='right_arm_elbow_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Arm_Elbow_Link.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_arm_elbow_link.stl"/>
         </geometry>
       </visual>
       
@@ -102,7 +102,7 @@
       <visual name='right_arm_forearm_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/HROS1_Simple - Right_Arm_Forearm_Servo.stl"/>
+          <mesh filename="package://hros1_description/meshes/right_arm_forearm_servo.stl"/>
         </geometry>
       </visual>
       
@@ -128,10 +128,8 @@
   <joint name="right_shoulder_pitch_powered_joint" type="revolute">
     <parent link="body_structure_link"/>
     <child link="right_arm_shoulder_link"/>
-    <axis>
-      <xyz>1 0 0</xyz>
-    </axis>
-    <origin xyz="0 -0.05 0.13" rpy="0 0 0"/>
+    <axis xyz="-1 0 0"/>
+    <origin xyz="-0.051 0.052 0.133" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
@@ -139,10 +137,8 @@
   <joint name="right_shoulder_roll_powered_joint" type="revolute">
     <parent link="right_arm_shoulder_link"/>
     <child link="right_arm_upper_servo_link"/>
-    <axis>
-      <xyz>0 -1 0</xyz>
-    </axis>
-    <origin xyz="0.085 -0.05 0.115" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <origin xyz="-0.03 0.02 -0.015" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
   
@@ -150,18 +146,15 @@
   <joint name="right_shoulder-elbow_fixed_joint" type="fixed">
     <parent link="right_arm_upper_servo_link"/>
     <child link="right_arm_elbow_link"/>
-    <axis>
-      <xyz>0 1 0</xyz>
-    </axis>
+    <axis xyz="0 -1 0"/>
+    <origin xyz="-0.002 -0.033 -0.037" rpy="0 0 0"/>
   </joint>
   
   <joint name="right_elbow_powered_joint" type="revolute">
     <parent link="right_arm_elbow_link"/>
     <child link="right_arm_forearm_servo_link"/>
-    <axis>
-      <xyz>-1 0 -0.25</xyz>
-    </axis>
-    <origin xyz="0 -0.037 0.03" rpy="0 0 0"/>
+    <axis xyz="-0.8 0.0 -0.2"/>
+    <origin xyz="0.005 0.0 -0.03" rpy="0 0 0"/>
     <limit effort="1" velocity="1" upper="3.1415" lower="-3.1415"/>
   </joint>
 </xacro:macro>

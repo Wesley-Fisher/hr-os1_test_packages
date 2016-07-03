@@ -14,7 +14,7 @@
       <visual name='neck_link_1_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_neck_link_1_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/neck_link_1.stl"/>
         </geometry>
       </visual>
       
@@ -45,7 +45,7 @@
       <visual name='neck_head_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_neck_head_servo_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/neck_head_servo.stl"/>
         </geometry>
       </visual>
       <collision name="collision">
@@ -82,7 +82,7 @@
       <visual name='neck_base_visual'>
         <origin xyz="0 0.0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_neck_base_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/neck_base.stl"/>
         </geometry>
       </visual>
       
@@ -113,7 +113,7 @@
       <visual name='neck_base_platform_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_neck_base_platform_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/neck_base_platform.stl"/>
         </geometry>
       </visual>
       <collision name="collision">
@@ -151,7 +151,7 @@
       <visual name='neck_link_2_visual'>
         <origin xyz="0 0 0" rpy="0 -0 0"/>
         <geometry>
-          <mesh filename="package://hros1_description/meshes/hros1_neck_link_2_moved.stl"/>
+          <mesh filename="package://hros1_description/meshes/neck_link_2.stl"/>
         </geometry>
       </visual>
       
